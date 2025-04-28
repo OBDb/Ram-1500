@@ -1,0 +1,13 @@
+command_id: 7E0.0104
+can_id_format: ELEVEN_BIT
+extended_addressing_enabled: false
+test_cases:
+- response: '7E803410436'
+  expected_values:
+    LOAD_PCT: 21.17647
+- response: 7E80341043F
+  expected_values:
+    LOAD_PCT: 24.70588
+- response: '7E803410440'
+  expected_values:
+    LOAD_PCT: 25.09804
