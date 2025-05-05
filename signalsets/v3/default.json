@@ -1,4 +1,19 @@
 { "commands": [
-
+{ "hdr": "7F1", "dbg": true, "cmd": {"22": "40B1"}, "freq": 1,
+  "signals": [
+    {"id": "RAM_TT_FL", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 255, "add": -50, "unit": "celsius" }, "name": "Front left tire temperature", "suggestedMetric": "frontLeftTireTemperature"}
+  ]},
+{ "hdr": "7F1", "dbg": true, "cmd": {"22": "40B2"}, "freq": 1,
+  "signals": [
+    {"id": "RAM_TT_FR", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 255, "add": -50, "unit": "celsius" }, "name": "Front right tire temperature", "suggestedMetric": "frontRightTireTemperature"}
+  ]},
+{ "hdr": "7F1", "dbg": true, "cmd": {"22": "40B3"}, "freq": 1,
+  "signals": [
+    {"id": "RAM_TT_RL", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 255, "add": -50, "unit": "celsius" }, "name": "Rear left tire temperature", "suggestedMetric": "rearLeftTireTemperature"}
+  ]},
+{ "hdr": "7F1", "dbg": true, "cmd": {"22": "40B4"}, "freq": 1,
+  "signals": [
+    {"id": "RAM_TT_RR", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 255, "add": -50, "unit": "celsius" }, "name": "Rear right tire temperature", "suggestedMetric": "rearRightTireTemperature"}
+  ]}
 ]
 }
