@@ -79,7 +79,14 @@ supported_commands_by_ecu:
 unsupported_commands_by_ecu:
   6B4:
   - 6B4.694.22D410
-  7E0:
-  - 7E0.7E8.0103
-  - 7E0.7E8.011C
-  - 7E0.7E8.0151
+  7E1:
+  - 7E1.7E9.010D
+  7E2:
+  - 7E2.7EA.010D
+  - 7E2.7EA.0131
+  - 7E2.7EA.0142
+  7F1:
+  - 7F1.2240B1
+  - 7F1.2240B2
+  - 7F1.2240B3
+  - 7F1.2240B4

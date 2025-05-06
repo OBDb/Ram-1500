@@ -5,33 +5,81 @@ test_cases:
 - response: 7E803410D00
   expected_values:
     VSS: 0
+- response: 7E803410D02
+  expected_values:
+    VSS: 2
+- response: 7E803410D03
+  expected_values:
+    VSS: 3
 - response: 7E803410D05
   expected_values:
     VSS: 5
+- response: 7E803410D06
+  expected_values:
+    VSS: 6
 - response: 7E803410D07
   expected_values:
     VSS: 7
+- response: 7E803410D08
+  expected_values:
+    VSS: 8
 - response: 7E803410D0A
   expected_values:
     VSS: 10
+- response: 7E803410D0D
+  expected_values:
+    VSS: 13
+- response: 7E803410D0F
+  expected_values:
+    VSS: 15
+- response: 7E803410D10
+  expected_values:
+    VSS: 16
 - response: 7E803410D14
   expected_values:
     VSS: 20
+- response: 7E803410D17
+  expected_values:
+    VSS: 23
 - response: 7E803410D18
   expected_values:
     VSS: 24
+- response: 7E803410D1B
+  expected_values:
+    VSS: 27
+- response: 7E803410D1C
+  expected_values:
+    VSS: 28
 - response: 7E803410D1E
   expected_values:
     VSS: 30
+- response: 7E803410D24
+  expected_values:
+    VSS: 36
+- response: 7E803410D25
+  expected_values:
+    VSS: 37
+- response: 7E803410D26
+  expected_values:
+    VSS: 38
+- response: 7E803410D28
+  expected_values:
+    VSS: 40
 - response: 7E803410D2B
   expected_values:
     VSS: 43
 - response: 7E803410D2D
   expected_values:
     VSS: 45
+- response: 7E803410D3B
+  expected_values:
+    VSS: 59
 - response: 7E803410D41
   expected_values:
     VSS: 65
+- response: 7E803410D43
+  expected_values:
+    VSS: 67
 - response: 7E803410D45
   expected_values:
     VSS: 69
@@ -44,21 +92,39 @@ test_cases:
 - response: 7E803410D4C
   expected_values:
     VSS: 76
+- response: 7E803410D4D
+  expected_values:
+    VSS: 77
 - response: 7E803410D4E
   expected_values:
     VSS: 78
 - response: 7E803410D55
   expected_values:
     VSS: 85
+- response: 7E803410D5C
+  expected_values:
+    VSS: 92
 - response: 7E803410D5E
   expected_values:
     VSS: 94
 - response: 7E803410D5F
   expected_values:
     VSS: 95
+- response: 7E803410D79
+  expected_values:
+    VSS: 121
+- response: 7E803410D7A
+  expected_values:
+    VSS: 122
 - response: 7E803410D7D
   expected_values:
     VSS: 125
+- response: 7E803410D81
+  expected_values:
+    VSS: 129
 - response: 7E803410D82
   expected_values:
     VSS: 130
+- response: 7E803410D85
+  expected_values:
+    VSS: 133

@@ -2,7 +2,7 @@ command_id: 7E0.0141
 can_id_format: ELEVEN_BIT
 extended_addressing_enabled: false
 test_cases:
-- response: 7E80641410027E1E5
+- response: 7E80641410004E5E5
   expected_values:
     ACRFCMPL: 0
     ACRF_ENA: 0
@@ -16,14 +16,14 @@ test_cases:
     EGR_CMPL: 1
     EGR_ENA: 1
     EVAPCMPL: 1
-    EVAP_ENA: 0
-    FUEL_CMPL: 1
-    FUEL_ENA: 1
+    EVAP_ENA: 1
+    FUEL_CMPL: 0
+    FUEL_ENA: 0
     HCATCMPL: 0
     HCAT_ENA: 0
     HTR_CMPL: 1
     HTR_ENA: 1
     MIS_CMPL: 0
-    MIS_ENA: 1
+    MIS_ENA: 0
     O2S_CMPL: 1
     O2S_ENA: 1
