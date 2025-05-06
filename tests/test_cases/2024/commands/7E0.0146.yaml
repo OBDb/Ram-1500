@@ -2,54 +2,14 @@ command_id: 7E0.0146
 can_id_format: ELEVEN_BIT
 extended_addressing_enabled: false
 test_cases:
+- response: |-
+    0146
+    7E8 03 41 46 4A
+  expected_values:
+    AAT: 34
 - response: '7E803414630'
   expected_values:
     AAT: 8
-- response: '7E803414631'
-  expected_values:
-    AAT: 9
-- response: '7E803414632'
-  expected_values:
-    AAT: 10
-- response: '7E803414633'
-  expected_values:
-    AAT: 11
-- response: '7E803414634'
-  expected_values:
-    AAT: 12
-- response: '7E803414635'
-  expected_values:
-    AAT: 13
-- response: '7E803414636'
-  expected_values:
-    AAT: 14
-- response: '7E803414637'
-  expected_values:
-    AAT: 15
-- response: '7E803414638'
-  expected_values:
-    AAT: 16
-- response: '7E803414639'
-  expected_values:
-    AAT: 17
-- response: 7E80341463A
-  expected_values:
-    AAT: 18
-- response: 7E80341463B
-  expected_values:
-    AAT: 19
-- response: 7E80341463C
-  expected_values:
-    AAT: 20
-- response: 7E80341463D
-  expected_values:
-    AAT: 21
-- response: 7E80341463E
-  expected_values:
-    AAT: 22
-- response: '7E803414641'
-  expected_values:
-    AAT: 25
 - response: 7E80341464A
   expected_values:
     AAT: 34

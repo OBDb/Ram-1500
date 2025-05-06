@@ -1,10 +1,10 @@
-command_id: 7E0.010D
+command_id: 7E0.0131
 can_id_format: ELEVEN_BIT
 extended_addressing_enabled: false
 test_cases:
-- response: 7E803410D00
+- response: 7E804413103D3
   expected_values:
-    VSS: 0
-- response: 7E803410D7E
+    CLR_DIST: 979
+- response: 7E804413103EE
   expected_values:
-    VSS: 126
+    CLR_DIST: 1006

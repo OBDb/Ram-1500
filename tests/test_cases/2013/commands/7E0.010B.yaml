@@ -1,10 +1,10 @@
-command_id: 7E0.010D
+command_id: 7E0.010B
 can_id_format: ELEVEN_BIT
 extended_addressing_enabled: false
 test_cases:
-- response: 7E803410D00
+- response: 7E803410B1A
   expected_values:
-    VSS: 0
-- response: 7E803410D7E
+    MAP: 26
+- response: 7E803410B1B
   expected_values:
-    VSS: 126
+    MAP: 27
