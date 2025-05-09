@@ -58,7 +58,7 @@ unsupported_commands_by_ecu:
   6B4:
   - 6B4.694.22D410
   7F1:
-  - 7F1.2240B1
-  - 7F1.2240B2
-  - 7F1.2240B3
-  - 7F1.2240B4
+  - 7F1.2240B1:RAM_TT_FL
+  - 7F1.2240B2:RAM_TT_FR
+  - 7F1.2240B3:RAM_TT_RL
+  - 7F1.2240B4:RAM_TT_RR

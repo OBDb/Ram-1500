@@ -1,0 +1,8 @@
+command_id: 7E0.019D
+can_id_format: ELEVEN_BIT
+extended_addressing_enabled: false
+test_cases:
+- response: 7E806419D00440044
+  expected_values:
+    FUEL_RATE_ALT: 1.36
+    VFUEL_RATE: 1.36

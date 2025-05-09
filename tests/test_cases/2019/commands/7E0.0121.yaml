@@ -1,0 +1,13 @@
+command_id: 7E0.0121
+can_id_format: ELEVEN_BIT
+extended_addressing_enabled: false
+test_cases:
+- response: '7E80441210006'
+  expected_values:
+    MIL_DIST: 6
+- response: 7E8044121000B
+  expected_values:
+    MIL_DIST: 11
+- response: '7E80441210018'
+  expected_values:
+    MIL_DIST: 24
