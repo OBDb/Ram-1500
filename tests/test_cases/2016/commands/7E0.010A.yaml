@@ -2,6 +2,9 @@ command_id: 7E0.010A
 can_id_format: ELEVEN_BIT
 extended_addressing_enabled: false
 test_cases:
+- response: 7E803410A85
+  expected_values:
+    FP: 399
 - response: 7E803410A86
   expected_values:
     FP: 402

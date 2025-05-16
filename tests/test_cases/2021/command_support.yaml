@@ -60,3 +60,9 @@ supported_commands_by_ecu:
   - 0131:CLR_DIST
   - 0142:VPWR
   - 0149:APP_D
+unsupported_commands_by_ecu:
+  7F1:
+  - 7F1.2240B1:RAM_TT_FL
+  - 7F1.2240B2:RAM_TT_FR
+  - 7F1.2240B3:RAM_TT_RL
+  - 7F1.2240B4:RAM_TT_RR

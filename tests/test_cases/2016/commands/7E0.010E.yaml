@@ -2,6 +2,9 @@ command_id: 7E0.010E
 can_id_format: ELEVEN_BIT
 extended_addressing_enabled: false
 test_cases:
+- response: 7E803410E95
+  expected_values:
+    SPARKADV: 10.5
 - response: 7E803410E99
   expected_values:
     SPARKADV: 12.5

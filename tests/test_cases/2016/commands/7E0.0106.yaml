@@ -5,3 +5,6 @@ test_cases:
 - response: 7E80341067F
   expected_values:
     SHRTFT1: -0.78125
+- response: '7E803410683'
+  expected_values:
+    SHRTFT1: 2.34375
