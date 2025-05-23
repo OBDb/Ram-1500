@@ -1,11 +1,11 @@
 { "commands": [
 { "hdr": "742", "fcm1": true, "dbg": true, "cmd": {"22": "A022"}, "freq": 1,
   "signals": [
-    {"id": "RAM_TP_FL",    "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 255, "add": -50, "unit": "psi" }, "name": "Front left tire pressure",  "suggestedMetric": "frontLeftTirePressure"},
-    {"id": "RAM_TP_FR",    "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 255, "add": -50, "unit": "psi" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"},
-    {"id": "RAM_TP_RL",    "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 255, "add": -50, "unit": "psi" }, "name": "Rear left tire pressure",   "suggestedMetric": "rearLeftTirePressure"},
-    {"id": "RAM_TP_RR",    "path": "Tires", "fmt": {"bix": 48, "len": 8, "max": 255, "add": -50, "unit": "psi" }, "name": "Rear right tire pressure",  "suggestedMetric": "rearRightTirePressure"},
-    {"id": "RAM_TP_SPARE", "path": "Tires", "fmt": {"bix": 56, "len": 8, "max": 255, "add": -50, "unit": "psi" }, "name": "Spare tire pressure"}
+    {"id": "RAM_TP_FL",    "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 255, "unit": "psi" }, "name": "Front left tire pressure",  "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "RAM_TP_FR",    "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 255, "unit": "psi" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"},
+    {"id": "RAM_TP_RL",    "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 255, "unit": "psi" }, "name": "Rear left tire pressure",   "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "RAM_TP_RR",    "path": "Tires", "fmt": {"bix": 48, "len": 8, "max": 255, "unit": "psi" }, "name": "Rear right tire pressure",  "suggestedMetric": "rearRightTirePressure"},
+    {"id": "RAM_TP_SPARE", "path": "Tires", "fmt": {"bix": 56, "len": 8, "max": 255, "unit": "psi" }, "name": "Spare tire pressure"}
   ]}
 ]
 }
