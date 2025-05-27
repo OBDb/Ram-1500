@@ -1,10 +1,6 @@
 command_id: 7E0.01A6
-can_id_format: ELEVEN_BIT
-extended_addressing_enabled: false
 test_cases:
-- response: |-
-    01A6
-    7E8 06 41 A6 00 04 25 91
+- response: "01A6\n7E8 06 41 A6 00 04 25 91 "
   expected_values:
     ODO: 27176.1
 - response: 7E80641A600041EA2

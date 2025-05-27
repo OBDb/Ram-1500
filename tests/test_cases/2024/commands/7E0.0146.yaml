@@ -1,10 +1,6 @@
 command_id: 7E0.0146
-can_id_format: ELEVEN_BIT
-extended_addressing_enabled: false
 test_cases:
-- response: |-
-    0146
-    7E8 03 41 46 4A
+- response: "0146\n7E8 03 41 46 4A "
   expected_values:
     AAT: 34
 - response: '7E803414630'

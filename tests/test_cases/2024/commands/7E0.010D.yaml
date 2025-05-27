@@ -1,10 +1,6 @@
 command_id: 7E0.010D
-can_id_format: ELEVEN_BIT
-extended_addressing_enabled: false
 test_cases:
-- response: |-
-    010D
-    7E8 03 41 0D 00
+- response: "010D\n7E8 03 41 0D 00 "
   expected_values:
     VSS: 0
 - response: 7E803410D00

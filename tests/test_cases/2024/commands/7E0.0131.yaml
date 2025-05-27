@@ -1,10 +1,6 @@
 command_id: 7E0.0131
-can_id_format: ELEVEN_BIT
-extended_addressing_enabled: false
 test_cases:
-- response: |-
-    0131
-    7E8 04 41 31 0A 3C
+- response: "0131\n7E8 04 41 31 0A 3C "
   expected_values:
     CLR_DIST: 2620
 - response: 7E8044131098E

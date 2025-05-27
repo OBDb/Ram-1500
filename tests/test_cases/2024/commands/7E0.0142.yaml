@@ -1,10 +1,6 @@
 command_id: 7E0.0142
-can_id_format: ELEVEN_BIT
-extended_addressing_enabled: false
 test_cases:
-- response: |-
-    0142
-    7E8 04 41 42 2F 87
+- response: "0142\n7E8 04 41 42 2F 87 "
   expected_values:
     VPWR: 12.167
 - response: 7E80441422D5C
