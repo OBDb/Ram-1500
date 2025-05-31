@@ -40,6 +40,9 @@ supported_commands_by_ecu:
   - 0149:APP_D
   - 014A:APP_E
   - 014C:TAC_PCT
+  - 7E0.010D:VSS
+  - 7E0.012F:FLI
+  - 7E0.0131:CLR_DIST
 unsupported_commands_by_ecu:
   6B4:
   - 6B4.694.22D410

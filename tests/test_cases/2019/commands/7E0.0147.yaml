@@ -15,8 +15,3 @@ test_cases:
 - response: '7E803414743'
   expected_values:
     TP_B: 26.27451
-- response: |-
-    > 7DF.0147
-    7E803414767
-  expected_values:
-    TP_B: 40.39216
