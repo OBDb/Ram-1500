@@ -1,5 +1,8 @@
 command_id: 7E0.018E
 test_cases:
-- response: 7E803418E90
-  expected_values:
+- expected_values:
+    TQ_FR: 16
+  response: 7E803418E8D
+- expected_values:
     TQ_FR: 19
+  response: 7E803418E90

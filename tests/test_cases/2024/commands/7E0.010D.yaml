@@ -1,11 +1,11 @@
 command_id: 7E0.010D
 test_cases:
-- response: "010D\n7E8 03 41 0D 00 "
-  expected_values:
+- expected_values:
     VSS: 0
-- response: 7E803410D00
-  expected_values:
+  response: "010D\n7E8 03 41 0D 00 "
+- expected_values:
     VSS: 0
-- response: 7E803410D60
-  expected_values:
-    VSS: 96
+  response: 7E803410D00
+- expected_values:
+    VSS: 131
+  response: 7E803410D83

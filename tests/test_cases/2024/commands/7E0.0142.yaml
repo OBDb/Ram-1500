@@ -1,17 +1,17 @@
 command_id: 7E0.0142
 test_cases:
-- response: "0142\n7E8 04 41 42 2F 87 "
-  expected_values:
+- expected_values:
     VPWR: 12.167
-- response: 7E80441422D5C
-  expected_values:
+  response: "0142\n7E8 04 41 42 2F 87 "
+- expected_values:
     VPWR: 11.612
-- response: 7E80441422E05
-  expected_values:
-    VPWR: 11.781
-- response: 7E804414235FC
-  expected_values:
+  response: 7E80441422D5C
+- expected_values:
+    VPWR: 12.801
+  response: '7E80441423201'
+- expected_values:
     VPWR: 13.82
-- response: 7E8044142360B
-  expected_values:
+  response: 7E804414235FC
+- expected_values:
     VPWR: 13.835
+  response: 7E8044142360B

@@ -1,17 +1,17 @@
 command_id: 7E0.0149
 test_cases:
-- response: '7E803414914'
-  expected_values:
+- expected_values:
     APP_D: 7.84314
-- response: 7E80341491F
-  expected_values:
+  response: '7E803414914'
+- expected_values:
     APP_D: 12.15686
-- response: '7E803414922'
-  expected_values:
+  response: 7E80341491F
+- expected_values:
     APP_D: 13.33333
-- response: '7E803414925'
-  expected_values:
+  response: '7E803414922'
+- expected_values:
     APP_D: 14.5098
-- response: '7E803414927'
-  expected_values:
+  response: '7E803414925'
+- expected_values:
     APP_D: 15.29412
+  response: '7E803414927'

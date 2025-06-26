@@ -1,11 +1,11 @@
 command_id: 7E0.0146
 test_cases:
-- response: "0146\n7E8 03 41 46 4A "
-  expected_values:
+- expected_values:
     AAT: 34
-- response: '7E803414630'
-  expected_values:
+  response: "0146\n7E8 03 41 46 4A "
+- expected_values:
     AAT: 8
-- response: '7E803414650'
-  expected_values:
+  response: '7E803414630'
+- expected_values:
     AAT: 40
+  response: '7E803414650'
