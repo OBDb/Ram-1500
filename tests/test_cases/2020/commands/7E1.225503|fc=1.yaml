@@ -1,0 +1,5 @@
+command_id: 7E1.225503|fc=1
+test_cases:
+- expected_values:
+    1500_GEAR: PARK
+  response: 7E9046255030D
