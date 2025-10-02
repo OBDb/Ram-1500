@@ -72,6 +72,8 @@ supported_commands_by_ecu:
 unsupported_commands_by_ecu:
   "6B4":
   - 6B4.694.22D410
+  "742":
+  - 742.22A022|fc=1:RAM_TP_FL,RAM_TP_FR,RAM_TP_RL,RAM_TP_RR,RAM_TP_SPARE
   "7F1":
   - 7F1.2240B1
   - 7F1.2240B2
