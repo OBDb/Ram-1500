@@ -30,6 +30,7 @@ supported_commands_by_ecu:
   - 0107:LONGFT1
   - 0108:SHRTFT2,SHRTFT4
   - 0109:LONGFT2,LONGFT4
+  - 010A:FP
   - 010B:MAP
   - 010C:RPM
   - 010D:VSS
@@ -77,6 +78,7 @@ supported_commands_by_ecu:
   - 7E0.0107:LONGFT1
   - 7E0.0108:SHRTFT2,SHRTFT4
   - 7E0.0109:LONGFT2,LONGFT4
+  - 7E0.010A:FP
   - 7E0.010B:MAP
   - 7E0.010C:RPM
   - 7E0.010D:VSS
@@ -170,6 +172,7 @@ unsupported_commands_by_ecu:
   - 740.22A0F4
   "742":
   - 742.22A022
+  - 742.4C2.22A077|fc=1:1500_TP_FL,1500_TP_FR,1500_TP_RL,1500_TP_RR
   "763":
   - 763.22032D
   "7AB":

@@ -9,3 +9,6 @@ test_cases:
 - expected_values:
     1500_ATF_T: 150.8
   response: 7E9066204FE6A6868
+- expected_values:
+    1500_ATF_T: 176
+  response: 7E9066204FE787978

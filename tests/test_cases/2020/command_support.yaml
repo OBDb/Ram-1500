@@ -141,6 +141,7 @@ unsupported_commands_by_ecu:
   - 740.22A0F4
   "742":
   - 742.22A022
+  - 742.4C2.22A077|fc=1:1500_TP_FL,1500_TP_FR,1500_TP_RL,1500_TP_RR
   "763":
   - 763.22032D
   "7AB":

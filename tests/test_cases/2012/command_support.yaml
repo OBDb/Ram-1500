@@ -43,6 +43,7 @@ supported_commands_by_ecu:
   - 014A:APP_E
   - 014C:TAC_PCT
   - 7E0.010D:VSS
+  - 7E0.011C:OBDSUP
   - 7E0.012F:FLI
   - 7E0.0131:CLR_DIST
 unsupported_commands_by_ecu:
@@ -57,6 +58,7 @@ unsupported_commands_by_ecu:
   - 740.22A0F4
   "742":
   - 742.22A022
+  - 742.4C2.22A077|fc=1:1500_TP_FL,1500_TP_FR,1500_TP_RL,1500_TP_RR
   "763":
   - 763.22032D
   "7AB":

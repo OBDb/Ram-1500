@@ -1,0 +1,10 @@
+command_id: 742.4C2.22A077|fc=1
+test_cases:
+- expected_values:
+    1500_TP_FL: 255
+    1500_TP_FR: 255
+    1500_TP_RL: 255
+    1500_TP_RR: 255
+  response: |-
+    4C2100B62A077000000
+    4C221FFFFFFFFFF0000

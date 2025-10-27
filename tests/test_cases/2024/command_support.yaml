@@ -111,6 +111,7 @@ supported_commands_by_ecu:
   - 7E1.2204FE:1500_ATF_T
   - 7E1.225503|fc=1:1500_GEAR
   - 7E1.225504|fc=1:1500_GEAR_TARGET
+  - 7E1.7E9.010D
   - 7E1.7E9.0131
   - 7E1.7E9.0142
   "7E2":
@@ -144,12 +145,11 @@ unsupported_commands_by_ecu:
   - 740.22A0F4
   "742":
   - 742.22A022
+  - 742.4C2.22A077|fc=1:1500_TP_FL,1500_TP_FR,1500_TP_RL,1500_TP_RR
   "763":
   - 763.22032D
   "7AB":
   - 7AB.222802
-  "7E1":
-  - 7E1.7E9.010D
   "7E2":
   - 7E2.7EA.010D
   - 7E2.7EA.0131

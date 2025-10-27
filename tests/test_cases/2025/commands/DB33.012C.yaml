@@ -1,0 +1,5 @@
+command_id: DB33.012C
+test_cases:
+- expected_values:
+    EGR_PCT: 36.47059
+  response: 18DAF11003412C5D
