@@ -66,6 +66,12 @@ supported_commands_by_ecu:
   - 0142:VPWR
   - 0149:APP_D
 unsupported_commands_by_ecu:
+  "742":
+  - 742.4C2.22A077|fc=1:1500_TP_FL,1500_TP_FR,1500_TP_RL,1500_TP_RR
+  "7E1":
+  - 7E1.2204FE:1500_ATF_T
+  - 7E1.225503|fc=1:1500_GEAR
+  - 7E1.225504|fc=1:1500_GEAR_TARGET
   "7F1":
   - 7F1.2240B1
   - 7F1.2240B2
