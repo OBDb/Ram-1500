@@ -1,5 +1,5 @@
 { "commands": [
-{ "hdr": "742", "rax": "4C2", "fcm1": true, "cmd": {"22": "A077"}, "freq": 5, "dbgfilter": { "to": 2011, "years": [2014, 2015, 2016, 2018, 2021, 2022, 2023], "from": 2026 },
+{ "hdr": "742", "rax": "4C2", "fcm1": true, "cmd": {"22": "A077"}, "freq": 5, "dbgfilter": { "to": 2011, "years": [2014, 2015, 2016, 2018, 2022, 2023], "from": 2026 },
   "signals": [
     {"id": "1500_TP_FL", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 255, "unit": "psi" }, "name": "Tire pressure front left",  "suggestedMetric": "frontRightTirePressure"},
     {"id": "1500_TP_FR", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 255, "unit": "psi" }, "name": "Tire pressure front right", "suggestedMetric": "frontLeftTirePressure"},
