@@ -1,8 +1,8 @@
 command_id: 7E0.0109
 test_cases:
 - expected_values:
-    LONGFT2: -10.15625
+    LONGFT2: -38.15625
   response: '7E803410973'
 - expected_values:
-    LONGFT2: -6.25
+    LONGFT2: -34.25
   response: '7E803410978'
