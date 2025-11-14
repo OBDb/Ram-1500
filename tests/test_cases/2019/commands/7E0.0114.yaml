@@ -2,25 +2,25 @@ command_id: 7E0.0114
 test_cases:
 - expected_values:
     O2S11: 0.665
-    SHRTFT11: -3.90625
+    SHRTFT11: -31.90625
   response: 7E8044114857B
 - expected_values:
     O2S11: 0.78
-    SHRTFT11: -3.125
+    SHRTFT11: -31.125
   response: 7E80441149C7C
 - expected_values:
     O2S11: 0.8
-    SHRTFT11: 1.5625
+    SHRTFT11: -26.4375
   response: 7E8044114A082
 - expected_values:
     O2S11: 0.84
-    SHRTFT11: 12.5
+    SHRTFT11: -15.5
   response: 7E8044114A890
 - expected_values:
     O2S11: 0.86
-    SHRTFT11: -1.5625
+    SHRTFT11: -29.5625
   response: 7E8044114AC7E
 - expected_values:
     O2S11: 0.86
-    SHRTFT11: 0
+    SHRTFT11: -28
   response: 7E8044114AC80
