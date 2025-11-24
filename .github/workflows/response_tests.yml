@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write
 
 jobs:
   test:
@@ -16,8 +17,65 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run tests in devcontainer
-        uses: devcontainers/ci@v0.3
+      - name: Checkout schemas repo
+        uses: actions/checkout@v4
         with:
+          repository: OBDb/.schemas
+          path: tests/schemas
+
+      - name: Run tests in devcontainer
+        id: test
+        uses: devcontainers/ci@v0.3
+        continue-on-error: true
+        with:
+          imageName: ghcr.io/obdb/devcontainer
           runCmd: |
-            pytest tests/ --ignore=tests/schemas -xvs -n auto
+            set -o pipefail
+            pytest tests/ --ignore=tests/schemas -xvs -n auto 2>&1 | tee /tmp/pytest-output.txt
+            exit ${PIPESTATUS[0]}
+
+      - name: Read test output
+        if: always()
+        id: test-output
+        run: |
+          # Get test output from the devcontainer run
+          OUTPUT=$(docker logs $(docker ps -lq) 2>&1 || echo "Could not retrieve test output")
+          # Use multiline string format for GitHub Actions
+          echo "output<<EOF" >> $GITHUB_OUTPUT
+          echo "$OUTPUT" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Comment on PR with test results
+        if: failure() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const output = `${{ steps.test-output.outputs.output }}`;
+
+            // Extract the relevant failure information
+            const failureSection = output.match(/={3,} FAILURES ={3,}[\s\S]*?={3,} short test summary info ={3,}[\s\S]*?(?=\n\n|\n!|$)/);
+            const summarySection = output.match(/={3,} short test summary info ={3,}[\s\S]*?(?=\n!|$)/);
+            const failedTests = output.match(/!{3,}.*?stopping after \d+ failures?.*?!{3,}[\s\S]*?=+ \d+ failed.*? =+/);
+
+            let body = `## ❌ Response Tests Failed\n\n`;
+
+            if (summarySection || failedTests) {
+              body += `### Summary\n\`\`\`\n${(summarySection?.[0] || failedTests?.[0] || 'Test failures detected').trim()}\n\`\`\`\n\n`;
+            }
+
+            body += `<details>\n<summary>Click to see full test output</summary>\n\n\`\`\`\n${output}\n\`\`\`\n\n</details>\n\n`;
+            body += `### How to fix\nTo update the test expectations based on the current signalset values, run:\n\`\`\`bash\npython3 tests/update_yaml_tests.py --verbose\n\`\`\``;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body
+            });
+
+      - name: Print fix instructions
+        if: failure()
+        run: |
+          echo "::notice title=How to fix failed tests::To fix the failed tests, run: python3 tests/update_yaml_tests.py --verbose"
+          exit 1
