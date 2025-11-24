@@ -6,9 +6,22 @@
       "Bash(jq:*)",
       "Skill(obdb-editor)",
       "Bash(python3:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "mcp__obdb-signalsets__list_signalsets",
+      "mcp__obdb-signalsets__get_signalset",
+      "mcp__obdb-signalsets__search_signals",
+      "mcp__obdb-signalsets__get_signal",
+      "mcp__obdb-signalsets__get_signal_stats",
+      "mcp__obdb-signalsets__get_unique_paths",
+      "mcp__obdb-signalsets__get_unique_metrics",
+      "mcp__obdb-signalsets__get_command_support",
+      "mcp__obdb-signalsets__get_commands_for_year",
+      "mcp__obdb-signalsets__validate_signalset"
     ],
     "deny": [],
     "ask": []
-  }
+  },
+  "enabledMcpjsonServers": [
+    "obdb-signalsets"
+  ]
 }

@@ -13,34 +13,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Checkout schemas repo
-        uses: actions/checkout@v4
+      - name: Run tests in devcontainer
+        uses: devcontainers/ci@v0.3
         with:
-          repository: OBDb/.schemas
-          path: tests/schemas
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.13'
-          cache: 'pip'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r tests/schemas/requirements.txt
-
-      - name: Run tests
-        id: run_tests
-        run: |
-          pytest tests/ --ignore=tests/schemas -xvs -n auto
-        continue-on-error: true
-
-      - name: Print fix instructions
-        if: steps.run_tests.outcome == 'failure'
-        run: |
-          echo "::notice title=How to fix failed tests::To fix the failed tests, run: python3 tests/update_yaml_tests.py --verbose"
-          exit 1
+          runCmd: |
+            pytest tests/ --ignore=tests/schemas -xvs -n auto
