@@ -1,4 +1,4 @@
-command_id: 742.4C2.22A077|fc=1
+command_id: 742.4C2.22A077|fc=1,f=-2018
 test_cases:
 - expected_values:
     1500_TP_FL: 255
