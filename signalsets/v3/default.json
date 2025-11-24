@@ -1,10 +1,18 @@
 { "commands": [
+{ "hdr": "740", "fcm1": true, "din": "03", "dbg": true, "cmd": {"22": "A0A1"}, "freq": 5,
+  "signals": [
+    {"id": "1500_TPAC_FL", "path": "Tires", "fmt": { "len": 8, "max": 0.255, "unit": "psi" }, "name": "Tire pressure front left, altitude compensated", "suggestedMetric": "frontLeftTirePressure"}
+  ]},
+{ "hdr": "740", "fcm1": true, "din": "03", "dbg": true, "cmd": {"22": "A0F1"}, "freq": 5,
+  "signals": [
+    {"id": "1500_TP_FL_740", "path": "Tires", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "bars" }, "name": "Tire pressure front left", "suggestedMetric": "frontLeftTirePressure"}
+  ]},
 { "hdr": "742", "rax": "4C2", "fcm1": true, "cmd": {"22": "A077"}, "freq": 5, "filter": { "to": 2018 }, "dbgfilter": { "to": 2012, "years": [2014, 2015, 2016], "from": 2018 },
   "signals": [
-    {"id": "1500_TP_FL", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 255, "unit": "psi" }, "name": "Tire pressure front left",  "suggestedMetric": "frontRightTirePressure"},
-    {"id": "1500_TP_FR", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 255, "unit": "psi" }, "name": "Tire pressure front right", "suggestedMetric": "frontLeftTirePressure"},
-    {"id": "1500_TP_RL", "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 255, "unit": "psi" }, "name": "Tire pressure rear left",   "suggestedMetric": "rearRightTirePressure"},
-    {"id": "1500_TP_RR", "path": "Tires", "fmt": {"bix": 48, "len": 8, "max": 255, "unit": "psi" }, "name": "Tire pressure rear right",  "suggestedMetric": "rearLeftTirePressure"}
+    {"id": "1500_TP_FL", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 255, "nullmax": 255, "unit": "psi" }, "name": "Tire pressure front left",  "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "1500_TP_FR", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 255, "nullmax": 255, "unit": "psi" }, "name": "Tire pressure front right", "suggestedMetric": "frontRightTirePressure"},
+    {"id": "1500_TP_RL", "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 255, "nullmax": 255, "unit": "psi" }, "name": "Tire pressure rear left",   "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "1500_TP_RR", "path": "Tires", "fmt": {"bix": 48, "len": 8, "max": 255, "nullmax": 255, "unit": "psi" }, "name": "Tire pressure rear right",  "suggestedMetric": "rearRightTirePressure"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "18"}, "freq": 1,
   "signals": [
