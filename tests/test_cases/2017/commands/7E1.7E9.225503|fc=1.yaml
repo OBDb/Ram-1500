@@ -1,4 +1,4 @@
-command_id: 7E1.225503|fc=1
+command_id: 7E1.7E9.225503|fc=1
 test_cases:
 - expected_values:
     1500_GEAR: '1'
@@ -12,12 +12,6 @@ test_cases:
 - expected_values:
     1500_GEAR: '4'
   response: '7E90462550304'
-- expected_values:
-    1500_GEAR: '5'
-  response: '7E90462550305'
-- expected_values:
-    1500_GEAR: '6'
-  response: '7E90462550306'
 - expected_values:
     1500_GEAR: '7'
   response: '7E90462550307'

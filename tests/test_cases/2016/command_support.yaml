@@ -94,11 +94,11 @@ supported_commands_by_ecu:
   - 0131:CLR_DIST
   - 0142:VPWR
   - 0149:APP_D
-  - 7E1.2204FE:1500_ATF_T
-  - 7E1.225503|fc=1:1500_GEAR
-  - 7E1.225504|fc=1:1500_GEAR_TARGET
+  - 7E1.225503
+  - 7E1.225504
   - 7E1.7E9.010D
   - 7E1.7E9.0131
+  - 7E1.7E9.2204FE:1500_ATF_T
 unsupported_commands_by_ecu:
   "6B4":
   - 6B4.694.22D410
