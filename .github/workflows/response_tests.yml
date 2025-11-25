@@ -25,52 +25,41 @@ jobs:
 
       - name: Run tests in devcontainer
         id: test
+        continue-on-error: true
         uses: devcontainers/ci@v0.3
         with:
           imageName: ghcr.io/obdb/devcontainer
           runCmd: |
-            set +e
-            pytest tests/ --ignore=tests/schemas -xvs -n auto 2>&1 | tee /tmp/pytest.log
-            TEST_EXIT_CODE=${PIPESTATUS[0]}
+            pytest tests/ --ignore=tests/schemas -xvs -n auto
 
-            # Save output and exit code for the next step
-            cat /tmp/pytest.log > /workspace/.test-output.txt
-            echo $TEST_EXIT_CODE > /workspace/.test-exit-code.txt
-
-            exit $TEST_EXIT_CODE
-
-      - name: Extract test output
-        if: failure()
+      - name: Extract test output from logs
+        if: always()
         id: extract-output
         run: |
-          # Read the test output from the workspace
-          if [ -f .test-output.txt ]; then
-            OUTPUT=$(cat .test-output.txt)
+          # Get the container logs (which contain pytest output)
+          CONTAINER_ID=$(docker ps -lq)
+          OUTPUT=$(docker logs $CONTAINER_ID 2>&1 || echo "Could not retrieve logs")
 
-            # Extract the failure section (from FAILURES to the end or next section)
-            FAILURES=$(echo "$OUTPUT" | awk '/^=+ FAILURES =+/,/^=+ short test summary info =+|^!+.*stopping after/')
+          # Extract the failure section
+          FAILURES=$(echo "$OUTPUT" | awk '/^=+ FAILURES =+/,/^=+ short test summary info =+|^!+.*stopping after/')
 
-            # If no failures section, just use last 100 lines
-            if [ -z "$FAILURES" ]; then
-              FAILURES=$(echo "$OUTPUT" | tail -100)
-            fi
-
-            # Save to output using multiline format
-            echo "failures<<EOF" >> $GITHUB_OUTPUT
-            echo "$FAILURES" >> $GITHUB_OUTPUT
-            echo "EOF" >> $GITHUB_OUTPUT
-
-            # Also save full output
-            echo "full_output<<EOF" >> $GITHUB_OUTPUT
-            echo "$OUTPUT" >> $GITHUB_OUTPUT
-            echo "EOF" >> $GITHUB_OUTPUT
-          else
-            echo "failures=Could not retrieve test output" >> $GITHUB_OUTPUT
-            echo "full_output=Could not retrieve test output" >> $GITHUB_OUTPUT
+          # If no failures section found, use last 150 lines as fallback
+          if [ -z "$FAILURES" ]; then
+            FAILURES=$(echo "$OUTPUT" | tail -150)
           fi
 
+          # Save to output using delimiter
+          {
+            echo "failures<<FAILEOF"
+            echo "$FAILURES"
+            echo "FAILEOF"
+            echo "full_output<<FULLEOF"
+            echo "$OUTPUT"
+            echo "FULLEOF"
+          } >> $GITHUB_OUTPUT
+
       - name: Comment on PR with test failures
-        if: failure() && github.event_name == 'pull_request'
+        if: steps.test.outcome == 'failure' && github.event_name == 'pull_request'
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -106,3 +95,7 @@ jobs:
               repo: context.repo.repo,
               body: body
             });
+
+      - name: Fail if tests failed
+        if: steps.test.outcome == 'failure'
+        run: exit 1
