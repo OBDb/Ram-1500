@@ -17,8 +17,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run tests and format failures in devcontainer
+      - name: Checkout schemas repo
+        uses: actions/checkout@v4
+        with:
+          repository: OBDb/.schemas
+          path: tests/schemas
+
+      - name: Run tests in devcontainer
         id: test
+        continue-on-error: true
         uses: devcontainers/ci@v0.3
         with:
           imageName: ghcr.io/obdb/devcontainer
@@ -29,25 +36,29 @@ jobs:
             TEST_EXIT=$?
             cat ./test-output.txt
 
-            # Format failures for PR comment
-            /usr/local/bin/format-test-failures.sh test-output.txt > ./test-failures.md
+            # Format results for PR comment (pass exit code)
+            /usr/local/bin/format-test-results.sh test-output.txt $TEST_EXIT > ./test-results.md
 
             exit $TEST_EXIT
 
-      - name: Set test failures output
-        if: failure()
+      - name: Set test results output
+        if: github.event_name == 'pull_request'
         run: |
-          if [ -f test-failures.md ]; then
+          if [ -f test-results.md ]; then
             {
-              echo 'TEST_FAILURES<<EOFMARKER'
-              cat test-failures.md
+              echo 'TEST_RESULTS<<EOFMARKER'
+              cat test-results.md
               echo 'EOFMARKER'
             } >> $GITHUB_ENV
           fi
 
-      - name: Comment test failures on PR
-        if: failure() && github.event_name == 'pull_request'
+      - name: Comment test results on PR
+        if: github.event_name == 'pull_request'
         uses: thollander/actions-comment-pull-request@v2
         with:
-          message: ${{ env.TEST_FAILURES }}
+          message: ${{ env.TEST_RESULTS }}
           comment_tag: response-tests
+
+      - name: Fail if tests failed
+        if: steps.test.outcome == 'failure'
+        run: exit 1
