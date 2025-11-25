@@ -23,7 +23,7 @@ jobs:
           repository: OBDb/.schemas
           path: tests/schemas
 
-      - name: Run tests in devcontainer
+      - name: Run tests and format failures in devcontainer
         id: test
         uses: devcontainers/ci@v0.3
         with:
@@ -34,60 +34,19 @@ jobs:
             pytest tests/ --ignore=tests/schemas -xvs -n auto > ./test-output.txt 2>&1
             TEST_EXIT=$?
             cat ./test-output.txt
+
+            # Format failures for PR comment
+            /usr/local/bin/format-test-failures.sh test-output.txt > ./test-failures.md
+
             exit $TEST_EXIT
 
-      - name: Extract and format failure details
+      - name: Set test failures output
         if: failure()
         run: |
-          if [ -f test-output.txt ]; then
-            # Extract assertion errors
-            FAILURES=$(grep "AssertionError: Signal" test-output.txt || echo "")
-
+          if [ -f test-failures.md ]; then
             {
               echo 'TEST_FAILURES<<EOFMARKER'
-              echo '## ❌ Response Tests Failed'
-              echo ''
-
-              if [ -n "$FAILURES" ]; then
-                # Parse each failure line using sed
-                echo "$FAILURES" | while read -r line; do
-                  # Extract components from the error message
-                  SIGNAL=$(echo "$line" | sed -n 's/.*Signal \([^ ]*\) value mismatch.*/\1/p')
-                  FILE=$(echo "$line" | sed -n 's/.*defined in \([^:]*\):.*/\1/p')
-                  LINE=$(echo "$line" | sed -n 's/.*defined in [^:]*:\([^)]*\)).*/\1/p')
-                  GOT=$(echo "$line" | sed -n 's/.*got \([^,]*\),.*/\1/p')
-                  EXPECTED=$(echo "$line" | sed -n 's/.*expected \(.*\)/\1/p')
-
-                  if [ -n "$SIGNAL" ] && [ -n "$FILE" ]; then
-                    FILENAME=$(basename "$FILE")
-                    # Extract year from path: tests/test_cases/YYYY/commands/...
-                    YEAR=$(echo "$FILE" | sed -n 's|.*/test_cases/\([0-9]\{4\}\)/commands/.*|\1|p')
-
-                    echo "### Model year: ${YEAR}"
-                    echo ""
-                    echo "Command failed: [\`${FILENAME}:${LINE}\`](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/blob/${GITHUB_SHA}/tests/test_cases/${YEAR}/commands/${FILENAME}#L${LINE})"
-                    echo ""
-                    echo '```'
-                    echo "Signal ${SIGNAL} value mismatch: got ${GOT}, expected ${EXPECTED}"
-                    echo '```'
-                    echo ""
-                  fi
-                done
-              else
-                # Fallback
-                echo '```'
-                tail -100 test-output.txt
-                echo '```'
-              fi
-
-              echo ""
-              echo "[View full test output](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID})"
-              echo ""
-              echo "### How to fix"
-              echo "To update the test expectations based on the current signalset values, run:"
-              echo '```bash'
-              echo "python3 tests/update_yaml_tests.py --verbose"
-              echo '```'
+              cat test-failures.md
               echo 'EOFMARKER'
             } >> $GITHUB_ENV
           fi
