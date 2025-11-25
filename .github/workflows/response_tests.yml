@@ -38,75 +38,62 @@ jobs:
 
       - name: Extract and format failure details
         if: failure()
-        id: extract-failures
         run: |
           if [ -f test-output.txt ]; then
-            # Extract the assertion error message which has the key info
-            FAILURES=$(grep -A 2 "AssertionError: Signal" test-output.txt || echo "")
-
-            if [ -n "$FAILURES" ]; then
-              # Process each failure line to extract: signal, file, line, got, expected
-              FORMATTED=""
-              while IFS= read -r line; do
-                if [[ $line =~ Signal\ ([^\ ]+)\ value\ mismatch\ \(defined\ in\ ([^:]+):([^)]+)\):\ got\ ([^,]+),\ expected\ (.+) ]]; then
-                  SIGNAL="${BASH_REMATCH[1]}"
-                  FILE="${BASH_REMATCH[2]}"
-                  LINE="${BASH_REMATCH[3]}"
-                  GOT="${BASH_REMATCH[4]}"
-                  EXPECTED="${BASH_REMATCH[5]}"
-
-                  # Extract just the filename and model year
-                  FILENAME=$(basename "$FILE")
-                  YEAR=$(echo "$FILE" | grep -oP '\d{4}(?=/commands)')
-
-                  FORMATTED+="### Model year: ${YEAR}\n\n"
-                  FORMATTED+="Command failed: [\`${FILENAME}:${LINE}\`](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/blob/${GITHUB_SHA}/tests/test_cases/${YEAR}/commands/${FILENAME}#L${LINE})\n\n"
-                  FORMATTED+="\`\`\`\nSignal ${SIGNAL} value mismatch: got ${GOT}, expected ${EXPECTED}\n\`\`\`\n\n"
-                fi
-              done <<< "$FAILURES"
-
-              if [ -z "$FORMATTED" ]; then
-                # Fallback if regex didn't match
-                FORMATTED="$FAILURES"
-              fi
-            else
-              # Get last 100 lines as fallback
-              FORMATTED=$(tail -100 test-output.txt)
-            fi
+            # Extract assertion errors
+            FAILURES=$(grep "AssertionError: Signal" test-output.txt || echo "")
 
             {
-              echo "failures<<ENDOFFAILURES"
-              echo -e "$FORMATTED"
-              echo "ENDOFFAILURES"
-            } >> $GITHUB_OUTPUT
-          else
-            echo "failures=Could not retrieve test output" >> $GITHUB_OUTPUT
+              echo 'TEST_FAILURES<<EOFMARKER'
+              echo '## ❌ Response Tests Failed'
+              echo ''
+
+              if [ -n "$FAILURES" ]; then
+                # Parse each failure line using sed
+                echo "$FAILURES" | while read -r line; do
+                  # Extract: Signal NAME value mismatch (defined in PATH:LINE): got VALUE1, expected VALUE2
+                  SIGNAL=$(echo "$line" | sed -n 's/.*Signal \([^ ]*\) value mismatch.*/\1/p')
+                  FILE=$(echo "$line" | sed -n 's/.*defined in \([^:]*\):.*/\1/p')
+                  LINE=$(echo "$line" | sed -n 's/.*defined in [^:]*:\([^)]*\)).*/\1/p')
+                  GOT=$(echo "$line" | sed -n 's/.*got \([^,]*\),.*/\1/p')
+                  EXPECTED=$(echo "$line" | sed -n 's/.*expected \(.*\)/\1/p')
+
+                  if [ -n "$SIGNAL" ] && [ -n "$FILE" ]; then
+                    FILENAME=$(basename "$FILE")
+                    YEAR=$(echo "$FILE" | grep -oE '[0-9]{4}' | head -1)
+
+                    echo "### Model year: ${YEAR}"
+                    echo ""
+                    echo "Command failed: [\`${FILENAME}:${LINE}\`](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/blob/${GITHUB_SHA}/tests/test_cases/${YEAR}/commands/${FILENAME}#L${LINE})"
+                    echo ""
+                    echo '```'
+                    echo "Signal ${SIGNAL} value mismatch: got ${GOT}, expected ${EXPECTED}"
+                    echo '```'
+                    echo ""
+                  fi
+                done
+              else
+                # Fallback
+                echo '```'
+                tail -100 test-output.txt
+                echo '```'
+              fi
+
+              echo ""
+              echo "[View full test output](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID})"
+              echo ""
+              echo "### How to fix"
+              echo "To update the test expectations based on the current signalset values, run:"
+              echo '```bash'
+              echo "python3 tests/update_yaml_tests.py --verbose"
+              echo '```'
+              echo 'EOFMARKER'
+            } >> $GITHUB_ENV
           fi
 
-      - name: Comment on PR with test failures
+      - name: Comment test failures on PR
         if: failure() && github.event_name == 'pull_request'
-        uses: actions/github-script@v7
+        uses: thollander/actions-comment-pull-request@v2
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const failures = `${{ steps.extract-failures.outputs.failures }}`;
-            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
-
-            const body = `## ❌ Response Tests Failed
-
-            ${failures}
-
-            [View full test output](${runUrl})
-
-            ### How to fix
-            To update the test expectations based on the current signalset values, run:
-            \`\`\`bash
-            python3 tests/update_yaml_tests.py --verbose
-            \`\`\``;
-
-            await github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: body
-            });
+          message: ${{ env.TEST_FAILURES }}
+          comment_tag: response-tests
