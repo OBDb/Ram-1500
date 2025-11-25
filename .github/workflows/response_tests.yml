@@ -17,12 +17,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Checkout schemas repo
-        uses: actions/checkout@v4
-        with:
-          repository: OBDb/.schemas
-          path: tests/schemas
-
       - name: Run tests and format failures in devcontainer
         id: test
         uses: devcontainers/ci@v0.3
