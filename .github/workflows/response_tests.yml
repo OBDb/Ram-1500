@@ -51,7 +51,7 @@ jobs:
               if [ -n "$FAILURES" ]; then
                 # Parse each failure line using sed
                 echo "$FAILURES" | while read -r line; do
-                  # Extract: Signal NAME value mismatch (defined in PATH:LINE): got VALUE1, expected VALUE2
+                  # Extract components from the error message
                   SIGNAL=$(echo "$line" | sed -n 's/.*Signal \([^ ]*\) value mismatch.*/\1/p')
                   FILE=$(echo "$line" | sed -n 's/.*defined in \([^:]*\):.*/\1/p')
                   LINE=$(echo "$line" | sed -n 's/.*defined in [^:]*:\([^)]*\)).*/\1/p')
@@ -60,7 +60,8 @@ jobs:
 
                   if [ -n "$SIGNAL" ] && [ -n "$FILE" ]; then
                     FILENAME=$(basename "$FILE")
-                    YEAR=$(echo "$FILE" | grep -oE '[0-9]{4}' | head -1)
+                    # Extract year from path: tests/test_cases/YYYY/commands/...
+                    YEAR=$(echo "$FILE" | sed -n 's|.*/test_cases/\([0-9]\{4\}\)/commands/.*|\1|p')
 
                     echo "### Model year: ${YEAR}"
                     echo ""
