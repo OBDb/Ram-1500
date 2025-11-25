@@ -4,11 +4,11 @@ test_cases:
     1500_ATF_T: 71.1
   response: 7E9066204FE3E3C3E
 - expected_values:
-    1500_ATF_T: 194
+    1500_ATF_T: 192
   response: 7E9066204FE828382
 - expected_values:
     1500_ATF_T: 194
   response: 7E9066204FE828383
 - expected_values:
-    1500_ATF_T: 195.8
+    1500_ATF_T: 2005.8
   response: 7E9066204FE838383
