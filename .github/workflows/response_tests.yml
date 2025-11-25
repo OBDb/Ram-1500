@@ -29,34 +29,39 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           imageName: ghcr.io/obdb/devcontainer
+          push: never
           runCmd: |
-            pytest tests/ --ignore=tests/schemas -xvs -n auto
+            mkdir -p /tmp/test-results
+            pytest tests/ --ignore=tests/schemas -xvs -n auto > /tmp/test-results/output.txt 2>&1
+            TEST_EXIT=$?
 
-      - name: Extract test output from logs
-        if: always()
-        id: extract-output
+            # Copy to a location that will be available to the host
+            cp /tmp/test-results/output.txt ./test-output.txt
+
+            exit $TEST_EXIT
+
+      - name: Extract failure details
+        if: always() && steps.test.outcome == 'failure'
+        id: extract-failures
         run: |
-          # Get the container logs (which contain pytest output)
-          CONTAINER_ID=$(docker ps -lq)
-          OUTPUT=$(docker logs $CONTAINER_ID 2>&1 || echo "Could not retrieve logs")
+          if [ -f test-output.txt ]; then
+            # Extract just the failures section
+            FAILURES=$(awk '/^=+ FAILURES =+/,/^=+ short test summary info =+/' test-output.txt | head -c 60000)
 
-          # Extract the failure section
-          FAILURES=$(echo "$OUTPUT" | awk '/^=+ FAILURES =+/,/^=+ short test summary info =+|^!+.*stopping after/')
+            # If failures section is empty, get the last part of output
+            if [ -z "$FAILURES" ]; then
+              FAILURES=$(tail -c 60000 test-output.txt)
+            fi
 
-          # If no failures section found, use last 150 lines as fallback
-          if [ -z "$FAILURES" ]; then
-            FAILURES=$(echo "$OUTPUT" | tail -150)
+            # Save to environment
+            {
+              echo "failures<<ENDOFFAILURES"
+              echo "$FAILURES"
+              echo "ENDOFFAILURES"
+            } >> $GITHUB_OUTPUT
+          else
+            echo "failures=Could not retrieve test output" >> $GITHUB_OUTPUT
           fi
-
-          # Save to output using delimiter
-          {
-            echo "failures<<FAILEOF"
-            echo "$FAILURES"
-            echo "FAILEOF"
-            echo "full_output<<FULLEOF"
-            echo "$OUTPUT"
-            echo "FULLEOF"
-          } >> $GITHUB_OUTPUT
 
       - name: Comment on PR with test failures
         if: steps.test.outcome == 'failure' && github.event_name == 'pull_request'
@@ -64,8 +69,8 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const failures = `${{ steps.extract-output.outputs.failures }}`;
-            const fullOutput = `${{ steps.extract-output.outputs.full_output }}`;
+            const failures = `${{ steps.extract-failures.outputs.failures }}`;
+            const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
 
             const body = `## ❌ Response Tests Failed
 
@@ -74,14 +79,7 @@ jobs:
             ${failures}
             \`\`\`
 
-            <details>
-            <summary>Click to see full test output</summary>
-
-            \`\`\`
-            ${fullOutput}
-            \`\`\`
-
-            </details>
+            [View full test output](${runUrl})
 
             ### How to fix
             To update the test expectations based on the current signalset values, run:
