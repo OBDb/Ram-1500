@@ -26,40 +26,79 @@ jobs:
       - name: Run tests in devcontainer
         id: test
         uses: devcontainers/ci@v0.3
-        continue-on-error: true
         with:
           imageName: ghcr.io/obdb/devcontainer
           runCmd: |
-            pytest tests/ --ignore=tests/schemas -xvs -n auto > /tmp/test-output.txt 2>&1
-            echo $? > /tmp/exit-code.txt
-            cat /tmp/test-output.txt
-            exit $(cat /tmp/exit-code.txt)
+            set +e
+            pytest tests/ --ignore=tests/schemas -xvs -n auto 2>&1 | tee /tmp/pytest.log
+            TEST_EXIT_CODE=${PIPESTATUS[0]}
 
-      - name: Check test results
-        id: check-result
-        if: always()
+            # Save output and exit code for the next step
+            cat /tmp/pytest.log > /workspace/.test-output.txt
+            echo $TEST_EXIT_CODE > /workspace/.test-exit-code.txt
+
+            exit $TEST_EXIT_CODE
+
+      - name: Extract test output
+        if: failure()
+        id: extract-output
         run: |
-          if [ "${{ steps.test.outcome }}" = "failure" ]; then
-            echo "tests_failed=true" >> $GITHUB_OUTPUT
+          # Read the test output from the workspace
+          if [ -f .test-output.txt ]; then
+            OUTPUT=$(cat .test-output.txt)
+
+            # Extract the failure section (from FAILURES to the end or next section)
+            FAILURES=$(echo "$OUTPUT" | awk '/^=+ FAILURES =+/,/^=+ short test summary info =+|^!+.*stopping after/')
+
+            # If no failures section, just use last 100 lines
+            if [ -z "$FAILURES" ]; then
+              FAILURES=$(echo "$OUTPUT" | tail -100)
+            fi
+
+            # Save to output using multiline format
+            echo "failures<<EOF" >> $GITHUB_OUTPUT
+            echo "$FAILURES" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+
+            # Also save full output
+            echo "full_output<<EOF" >> $GITHUB_OUTPUT
+            echo "$OUTPUT" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
           else
-            echo "tests_failed=false" >> $GITHUB_OUTPUT
+            echo "failures=Could not retrieve test output" >> $GITHUB_OUTPUT
+            echo "full_output=Could not retrieve test output" >> $GITHUB_OUTPUT
           fi
 
-      - name: Comment on PR with test results
-        if: steps.check-result.outputs.tests_failed == 'true' && github.event_name == 'pull_request'
+      - name: Comment on PR with test failures
+        if: failure() && github.event_name == 'pull_request'
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            const failures = `${{ steps.extract-output.outputs.failures }}`;
+            const fullOutput = `${{ steps.extract-output.outputs.full_output }}`;
+
             const body = `## ❌ Response Tests Failed
+
+            ### Failure Details
+            \`\`\`
+            ${failures}
+            \`\`\`
+
+            <details>
+            <summary>Click to see full test output</summary>
+
+            \`\`\`
+            ${fullOutput}
+            \`\`\`
+
+            </details>
 
             ### How to fix
             To update the test expectations based on the current signalset values, run:
             \`\`\`bash
             python3 tests/update_yaml_tests.py --verbose
-            \`\`\`
-
-            See the [Actions run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}) for full test output.`;
+            \`\`\``;
 
             await github.rest.issues.createComment({
               issue_number: context.issue.number,
@@ -67,9 +106,3 @@ jobs:
               repo: context.repo.repo,
               body: body
             });
-
-      - name: Fail if tests failed
-        if: steps.check-result.outputs.tests_failed == 'true'
-        run: |
-          echo "::error title=Tests Failed::To fix the failed tests, run: python3 tests/update_yaml_tests.py --verbose"
-          exit 1
