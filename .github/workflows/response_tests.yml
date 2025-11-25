@@ -25,24 +25,23 @@ jobs:
 
       - name: Run tests in devcontainer
         id: test
-        continue-on-error: true
         uses: devcontainers/ci@v0.3
         with:
           imageName: ghcr.io/obdb/devcontainer
           push: never
           runCmd: |
-            set +e
             pytest tests/ --ignore=tests/schemas -xvs -n auto > ./test-output.txt 2>&1
             TEST_EXIT=$?
             cat ./test-output.txt
 
-            # Format results for PR comment (pass exit code)
-            /usr/local/bin/format-test-results.sh test-output.txt $TEST_EXIT > ./test-results.md
+            # Format results for PR comment (always succeeds)
+            /usr/local/bin/format-test-results.sh test-output.txt $TEST_EXIT > ./test-results.md || true
 
+            # Exit with the actual test result
             exit $TEST_EXIT
 
       - name: Set test results output
-        if: github.event_name == 'pull_request'
+        if: always() && github.event_name == 'pull_request'
         run: |
           if [ -f test-results.md ]; then
             {
@@ -53,12 +52,8 @@ jobs:
           fi
 
       - name: Comment test results on PR
-        if: github.event_name == 'pull_request'
+        if: always() && github.event_name == 'pull_request'
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: ${{ env.TEST_RESULTS }}
           comment_tag: response-tests
-
-      - name: Fail if tests failed
-        if: steps.test.outcome == 'failure'
-        run: exit 1
