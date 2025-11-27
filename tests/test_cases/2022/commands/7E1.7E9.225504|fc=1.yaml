@@ -1,0 +1,5 @@
+command_id: 7E1.7E9.225504|fc=1
+test_cases:
+- expected_values:
+    1500_GEAR_TARGET: REAR
+  response: 7E9046255040B

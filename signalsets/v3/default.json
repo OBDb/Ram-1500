@@ -38,11 +38,11 @@
   "signals": [
     {"id": "1500_ATF_T_V2", "path": "Transmission", "fmt": { "len": 16, "max": 300, "div": 64, "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variation 2", "suggestedMetric": "transmissionFluidTemperature"}
   ]},
-{ "hdr": "7E1", "rax": "7E9", "cmd": {"22": "04FE"}, "freq": 1, "dbgfilter": { "to": 2012, "years": [2014, 2015, 2018, 2022], "from": 2025 },
+{ "hdr": "7E1", "rax": "7E9", "cmd": {"22": "04FE"}, "freq": 1, "dbgfilter": { "to": 2012, "years": [2014, 2015, 2018], "from": 2025 },
   "signals": [
     {"id": "1500_ATF_T", "path": "Transmission", "fmt": { "len": 8, "max": 300, "min": -30, "mul": 1.8, "add": -40, "unit": "fahrenheit" }, "name": "Transmission fluid temperature", "suggestedMetric": "transmissionFluidTemperature"}
   ]},
-{ "hdr": "7E1", "rax": "7E9", "fcm1": true, "cmd": {"22": "5503"}, "freq": 1, "dbgfilter": { "to": 2012, "years": [2014, 2015, 2018, 2022], "from": 2025 },
+{ "hdr": "7E1", "rax": "7E9", "fcm1": true, "cmd": {"22": "5503"}, "freq": 1, "dbgfilter": { "to": 2012, "years": [2014, 2015, 2018], "from": 2025 },
   "signals": [
     {"id": "1500_GEAR", "path": "Transmission", "name": "Current gear", "description": "The automatic transmission gear.", "fmt": {"bix": 4, "len": 4, "map": {
           "0":  { "description": "Neutral",      "value": "NEUTRAL" },
@@ -61,7 +61,7 @@
         }}
     }
   ]},
-{ "hdr": "7E1", "rax": "7E9", "fcm1": true, "cmd": {"22": "5504"}, "freq": 1, "dbgfilter": { "to": 2012, "years": [2014, 2015, 2018, 2022], "from": 2025 },
+{ "hdr": "7E1", "rax": "7E9", "fcm1": true, "cmd": {"22": "5504"}, "freq": 1, "dbgfilter": { "to": 2012, "years": [2014, 2015, 2018], "from": 2025 },
   "signals": [
     {"id": "1500_GEAR_TARGET", "path": "Transmission", "name": "Target gear", "description": "The target gear.", "fmt": {"bix": 4, "len": 4, "map": {
           "0":  { "description": "Neutral",      "value": "NEUTRAL" },
