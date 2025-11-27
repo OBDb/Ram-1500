@@ -1,0 +1,5 @@
+command_id: 7E1.7E9.2204FE
+test_cases:
+- expected_values:
+    1500_ATF_T: 188.6
+  response: 7E9066204FE7F7E7F
