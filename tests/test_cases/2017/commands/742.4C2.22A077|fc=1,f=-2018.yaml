@@ -35,6 +35,22 @@ test_cases:
 - expected_values:
     1500_TP_FL: 36
     1500_TP_FR: 37
+    1500_TP_RL: 36
+    1500_TP_RR: 37
+  response: |-
+    4C2100B62A077400003
+    4C22124252425FF0003
+- expected_values:
+    1500_TP_FL: 36
+    1500_TP_FR: 37
+    1500_TP_RL: 37
+    1500_TP_RR: 37
+  response: |-
+    4C2100B62A077400003
+    4C22124252525FF0003
+- expected_values:
+    1500_TP_FL: 36
+    1500_TP_FR: 37
     1500_TP_RL: 37
     1500_TP_RR: 38
   response: |-
