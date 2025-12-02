@@ -81,6 +81,18 @@ supported_commands_by_ecu:
   - 7E1.225504
   - 7E1.7E9.2204FE:1500_ATF_T
 unsupported_commands_by_ecu:
+  "740":
+  - 740.22A0A1|fc=1,din=03:1500_TPAC_FL
+  - 740.22A0F1|fc=1,din=03:1500_TP_FL_740
+  "7DA":
+  - 7DA.22A020|din=03:1500_TP_FL_7DA
+  - 7DA.22A021|din=03:1500_TP_FR_7DA
+  - 7DA.22A022|din=13:1500_TP_RL_7DA
+  - 7DA.22A023|din=03:1500_TP_RR_7DA
+  "7E0":
+  - 7E0.7E8.2118:1500_ATF_T_V3
+  "7E1":
+  - 7E1.7E9.2118:1500_ATF_T_V2
   "7F1":
   - 7F1.2240B1
   - 7F1.2240B2
