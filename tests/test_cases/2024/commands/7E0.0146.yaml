@@ -4,8 +4,8 @@ test_cases:
     AAT: 34
   response: "0146\n7E8 03 41 46 4A "
 - expected_values:
-    AAT: -6
-  response: '7E803414622'
+    AAT: -7
+  response: '7E803414621'
 - expected_values:
     AAT: 44
   response: '7E803414654'
