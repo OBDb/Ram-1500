@@ -1,5 +1,7 @@
 model_year: 2019
 supported_commands_by_ecu:
+  "7AB":
+  - 7AB.222802
   "7DF":
   - 7DF.0101
   - 7DF.0104
@@ -175,8 +177,6 @@ unsupported_commands_by_ecu:
   - 742.4C2.22A077
   "763":
   - 763.22032D
-  "7AB":
-  - 7AB.222802
   "7DA":
   - 7DA.22A020|din=03:1500_TP_FL_7DA
   - 7DA.22A021|din=03:1500_TP_FR_7DA
