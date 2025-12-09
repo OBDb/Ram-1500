@@ -7,7 +7,7 @@
   "signals": [
     {"id": "1500_TP_FL_740", "path": "Tires", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "bars" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"}
   ]},
-{ "hdr": "742", "rax": "4C2", "fcm1": true, "cmd": {"22": "A077"}, "freq": 5, "filter": { "to": 2018 }, "dbgfilter": { "to": 2012, "years": [2014, 2015, 2016], "from": 2018 },
+{ "hdr": "742", "rax": "4C2", "fcm1": true, "cmd": {"22": "A077"}, "freq": 5, "filter": { "to": 2018 }, "dbgfilter": { "to": 2012, "years": [2014, 2015], "from": 2018 },
   "signals": [
     {"id": "1500_TP_FL", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 255, "nullmax": 255, "unit": "psi" }, "name": "Front left tire pressure",  "suggestedMetric": "frontLeftTirePressure"},
     {"id": "1500_TP_FR", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 255, "nullmax": 255, "unit": "psi" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"},
