@@ -5,10 +5,10 @@ test_cases:
   response: 7E9066204FE444042
 - expected_values:
     1500_ATF_T: 188.6
-  response: 7E9066204FE7F7D7F
+  response: 7E9066204FE7F7E80
 - expected_values:
     1500_ATF_T: 190.4
   response: 7E9066204FE807C7E
 - expected_values:
     1500_ATF_T: 190.4
-  response: 7E9066204FE807E7F
+  response: 7E9066204FE807F80
