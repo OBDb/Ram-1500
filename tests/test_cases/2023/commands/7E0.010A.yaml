@@ -3,3 +3,9 @@ test_cases:
 - expected_values:
     FP: 339
   response: 7E803410A71
+- expected_values:
+    FP: 348
+  response: 7E803410A74
+- expected_values:
+    FP: 393
+  response: 7E803410A83

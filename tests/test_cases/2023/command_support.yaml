@@ -75,6 +75,7 @@ supported_commands_by_ecu:
   - 7E0.010E:SPARKADV
   - 7E0.010F:IAT
   - 7E0.0111:TP
+  - 7E0.011C:OBDSUP
   - 7E0.011F:RUNTM
   - 7E0.0121:MIL_DIST
   - 7E0.012E:EVAP_PCT
@@ -116,6 +117,7 @@ supported_commands_by_ecu:
   - 7E1.225504
   - 7E1.7E9.2204FE:1500_ATF_T
   - 7E1.7E9.225503|fc=1:1500_GEAR
+  - 7E1.7E9.225504|fc=1:1500_GEAR_TARGET
 unsupported_commands_by_ecu:
   "6B4":
   - 6B4.694.22D410
