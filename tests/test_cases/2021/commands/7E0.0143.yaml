@@ -4,6 +4,9 @@ test_cases:
     LOAD_ABS: 16.86275
   response: 7E8044143002B
 - expected_values:
+    LOAD_ABS: 21.17647
+  response: '7E80441430036'
+- expected_values:
     LOAD_ABS: 22.35294
   response: '7E80441430039'
 - expected_values:
