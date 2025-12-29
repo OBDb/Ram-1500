@@ -102,6 +102,7 @@ supported_commands_by_ecu:
   - 7E1.7E9.0131
   - 7E1.7E9.0142
   - 7E1.7E9.2204FE:1500_ATF_T
+  - 7E1.7E9.225503|fc=1:1500_GEAR
 unsupported_commands_by_ecu:
   "740":
   - 740.22A0A1|fc=1,din=03:1500_TPAC_FL
