@@ -8,7 +8,7 @@ test_cases:
   response: 7E9066204FE7C7C7C
 - expected_values:
     1500_ATF_T: 185
-  response: 7E9066204FE7D7B7B
+  response: 7E9066204FE7D7A7B
 - expected_values:
     1500_ATF_T: 185
   response: 7E9066204FE7D7C7D
