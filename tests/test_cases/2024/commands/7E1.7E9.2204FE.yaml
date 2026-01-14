@@ -1,6 +1,9 @@
 command_id: 7E1.7E9.2204FE
 test_cases:
 - expected_values:
+    1500_ATF_T: 28.4
+  response: 7E9066204FE262727
+- expected_values:
     1500_ATF_T: 30.2
   response: 7E9066204FE272526
 - expected_values:
