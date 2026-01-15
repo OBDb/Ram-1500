@@ -1,42 +1,10 @@
 { "commands": [
-{ "hdr": "740", "fcm1": true, "din": "03", "dbg": true, "cmd": {"22": "A0A1"}, "freq": 5,
-  "signals": [
-    {"id": "1500_TPAC_FL", "path": "Tires", "fmt": { "len": 8, "max": 0.255, "unit": "psi" }, "name": "Front left tire pressure, altitude compensated", "suggestedMetric": "frontLeftTirePressure"}
-  ]},
-{ "hdr": "740", "fcm1": true, "din": "03", "dbg": true, "cmd": {"22": "A0F1"}, "freq": 5,
-  "signals": [
-    {"id": "1500_TP_FL_740", "path": "Tires", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "bars" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"}
-  ]},
-{ "hdr": "742", "rax": "4C2", "fcm1": true, "cmd": {"22": "A077"}, "freq": 5, "filter": { "to": 2018 }, "dbgfilter": { "to": 2012, "years": [2014, 2015], "from": 2018 },
+{ "hdr": "742", "rax": "4C2", "fcm1": true, "cmd": {"22": "A077"}, "freq": 5, "filter": { "to": 2017 }, "dbgfilter": { "to": 2012, "years": [2014, 2015], "from": 2018 },
   "signals": [
     {"id": "1500_TP_FL", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 255, "nullmax": 255, "unit": "psi" }, "name": "Front left tire pressure",  "suggestedMetric": "frontLeftTirePressure"},
     {"id": "1500_TP_FR", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 255, "nullmax": 255, "unit": "psi" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"},
     {"id": "1500_TP_RL", "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 255, "nullmax": 255, "unit": "psi" }, "name": "Rear left tire pressure",   "suggestedMetric": "rearLeftTirePressure"},
     {"id": "1500_TP_RR", "path": "Tires", "fmt": {"bix": 48, "len": 8, "max": 255, "nullmax": 255, "unit": "psi" }, "name": "Rear right tire pressure",  "suggestedMetric": "rearRightTirePressure"}
-  ]},
-{ "hdr": "7DA", "din": "03", "dbg": true, "cmd": {"22": "A020"}, "freq": 5,
-  "signals": [
-    {"id": "1500_TP_FL_7DA", "path": "Tires", "fmt": { "len": 8, "max": 92, "mul": 92.46, "div": 255, "unit": "psi" }, "name": "Front left tire pressure"}
-  ]},
-{ "hdr": "7DA", "din": "03", "dbg": true, "cmd": {"22": "A021"}, "freq": 5,
-  "signals": [
-    {"id": "1500_TP_FR_7DA", "path": "Tires", "fmt": { "len": 8, "max": 92, "mul": 92.46, "div": 255, "unit": "psi" }, "name": "Front right tire pressure"}
-  ]},
-{ "hdr": "7DA", "din": "13", "dbg": true, "cmd": {"22": "A022"}, "freq": 5,
-  "signals": [
-    {"id": "1500_TP_RL_7DA", "path": "Tires", "fmt": { "len": 8, "max": 92, "mul": 92.46, "div": 255, "unit": "psi" }, "name": "Rear left tire pressure"}
-  ]},
-{ "hdr": "7DA", "din": "03", "dbg": true, "cmd": {"22": "A023"}, "freq": 5,
-  "signals": [
-    {"id": "1500_TP_RR_7DA", "path": "Tires", "fmt": { "len": 8, "max": 92, "mul": 92.46, "div": 255, "unit": "psi" }, "name": "Rear right tire pressure"}
-  ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "18"}, "freq": 1,
-  "signals": [
-    {"id": "1500_ATF_T_V3", "path": "Transmission", "fmt": { "len": 16, "max": 1023.984375, "div": 64, "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variation 3", "suggestedMetric": "transmissionFluidTemperature"}
-  ]},
-{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "18"}, "freq": 1,
-  "signals": [
-    {"id": "1500_ATF_T_V2", "path": "Transmission", "fmt": { "len": 16, "max": 300, "div": 64, "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variation 2", "suggestedMetric": "transmissionFluidTemperature"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "cmd": {"22": "04FE"}, "freq": 1, "dbgfilter": { "to": 2012, "years": [2014, 2015, 2018], "from": 2025 },
   "signals": [
