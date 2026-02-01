@@ -5,3 +5,8 @@ test_cases:
   response: |-
     18DAF11003413030
     18DAF118034130FF
+- expected_values:
+    WARM_UPS: 6
+  response: |-
+    18DAF11803413007
+    18DAF11003413006
