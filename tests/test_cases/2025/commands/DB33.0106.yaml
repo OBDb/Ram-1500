@@ -15,5 +15,11 @@ test_cases:
     18DAF1180441310747
     18DAF1100441310768
 - expected_values:
+    SHRTFT1: 3.125
+  response: |-
+    18DAF11003410684
+    18DAF110024A00
+    18DAF118024A00
+- expected_values:
     SHRTFT1: 21.875
   response: 18DAF1100341069C
