@@ -6,3 +6,8 @@ test_cases:
 - expected_values:
     EOT: 103
   response: 18DAF11003415C8F
+- expected_values:
+    EOT: 98
+  response: |-
+    18DAF1100641010007E500
+    18DAF11003415C8A
