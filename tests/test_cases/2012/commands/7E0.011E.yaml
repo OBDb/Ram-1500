@@ -1,0 +1,5 @@
+command_id: 7E0.011E
+test_cases:
+- expected_values:
+    PTO_STAT: 0
+  response: 7E803411E00
