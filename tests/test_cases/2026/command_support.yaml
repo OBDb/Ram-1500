@@ -54,7 +54,11 @@ supported_commands_by_ecu:
   - DB33.015C:EOT
   - DB33.01A6:ODO
 unsupported_commands_by_ecu:
+  "742":
+  - 742.4C2.22A077
   "7E1":
+  - 7E1.225503
+  - 7E1.225504
   - 7E1.7E9.2204FE:1500_ATF_T
   - 7E1.7E9.225503|fc=1:1500_GEAR
   - 7E1.7E9.225504|fc=1:1500_GEAR_TARGET
