@@ -1,5 +1,26 @@
 command_id: DB33.010B
 test_cases:
 - expected_values:
+    MAP: 24
+  response: 18DAF11003410B18
+- expected_values:
+    MAP: 26
+  response: 18DAF11003410B1A
+- expected_values:
+    MAP: 27
+  response: 18DAF11003410B1B
+- expected_values:
+    MAP: 28
+  response: 18DAF11003410B1C
+- expected_values:
+    MAP: 30
+  response: 18DAF11003410B1E
+- expected_values:
     MAP: 34
   response: 18DAF11003410B22
+- expected_values:
+    MAP: 36
+  response: 18DAF11003410B24
+- expected_values:
+    MAP: 37
+  response: 18DAF11003410B25

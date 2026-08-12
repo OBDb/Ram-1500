@@ -1,6 +1,30 @@
 command_id: DB33.0168
 test_cases:
 - expected_values:
+    IAT_11: 31
+    IAT_11_SUP: 1
+    IAT_12: 46
+    IAT_12_SUP: 1
+    IAT_13_SUP: 0
+    IAT_21_SUP: 0
+    IAT_22_SUP: 0
+    IAT_23_SUP: 0
+  response: |-
+    18DAF1101009416803475600
+    18DAF1102100000000000000
+- expected_values:
+    IAT_11: 69
+    IAT_11_SUP: 1
+    IAT_12: 58
+    IAT_12_SUP: 1
+    IAT_13_SUP: 0
+    IAT_21_SUP: 0
+    IAT_22_SUP: 0
+    IAT_23_SUP: 0
+  response: |-
+    18DAF11010094168036D6200
+    18DAF1102100000000000000
+- expected_values:
     IAT_11: 21
     IAT_11_SUP: 1
     IAT_12: 72
