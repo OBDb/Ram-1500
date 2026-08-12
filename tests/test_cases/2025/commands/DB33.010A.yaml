@@ -3,3 +3,18 @@ test_cases:
 - expected_values:
     FP: 483
   response: 18DAF11003410AA1
+- expected_values:
+    FP: 513
+  response: 18DAF11003410AAB
+- expected_values:
+    FP: 516
+  response: 18DAF11003410AAC
+- expected_values:
+    FP: 519
+  response: 18DAF11003410AAD
+- expected_values:
+    FP: 525
+  response: 18DAF11003410AAF
+- expected_values:
+    FP: 564
+  response: 18DAF11003410ABC
