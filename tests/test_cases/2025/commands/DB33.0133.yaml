@@ -7,5 +7,8 @@ test_cases:
     BARO: 84
   response: 18DAF11003413354
 - expected_values:
+    BARO: 85
+  response: 18DAF11003413355
+- expected_values:
     BARO: 99
   response: 18DAF11003413363

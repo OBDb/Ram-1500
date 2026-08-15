@@ -1,0 +1,8 @@
+command_id: DB33.014F
+test_cases:
+- expected_values:
+    MAX_EQ_RAT: 0
+    MAX_MAP: 400
+    MAX_O2_CURR: 0
+    MAX_O2_VOLT: 0
+  response: 18DAF11006414F00000028

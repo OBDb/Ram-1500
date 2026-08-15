@@ -16,6 +16,9 @@ test_cases:
     MAP: 30
   response: 18DAF11003410B1E
 - expected_values:
+    MAP: 31
+  response: 18DAF11003410B1F
+- expected_values:
     MAP: 34
   response: 18DAF11003410B22
 - expected_values:
