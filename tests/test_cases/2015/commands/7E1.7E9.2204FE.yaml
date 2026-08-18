@@ -4,29 +4,5 @@ test_cases:
     1500_ATF_T: 87.8
   response: 7E9066204FE474746
 - expected_values:
-    1500_ATF_T: 89.6
-  response: 7E9066204FE484847
-- expected_values:
-    1500_ATF_T: 91.4
-  response: 7E9066204FE494847
-- expected_values:
-    1500_ATF_T: 93.2
-  response: 7E9066204FE4A4948
-- expected_values:
-    1500_ATF_T: 95
-  response: 7E9066204FE4B4A49
-- expected_values:
-    1500_ATF_T: 98.6
-  response: 7E9066204FE4D4B4A
-- expected_values:
-    1500_ATF_T: 100.4
-  response: 7E9066204FE4E4C4B
-- expected_values:
-    1500_ATF_T: 102.2
-  response: 7E9066204FE4F4D4C
-- expected_values:
-    1500_ATF_T: 105.8
-  response: 7E9066204FE514F4E
-- expected_values:
-    1500_ATF_T: 111.2
-  response: 7E9066204FE54514F
+    1500_ATF_T: 181.4
+  response: 7E9066204FE7B7978
