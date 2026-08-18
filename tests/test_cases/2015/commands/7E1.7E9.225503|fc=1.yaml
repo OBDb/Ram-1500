@@ -4,6 +4,12 @@ test_cases:
     1500_GEAR: '1'
   response: '7E90462550301'
 - expected_values:
+    1500_GEAR: '2'
+  response: '7E90462550302'
+- expected_values:
+    1500_GEAR: '3'
+  response: '7E90462550303'
+- expected_values:
     1500_GEAR: '4'
   response: '7E90462550304'
 - expected_values:
@@ -18,3 +24,6 @@ test_cases:
 - expected_values:
     1500_GEAR: '8'
   response: '7E90462550308'
+- expected_values:
+    1500_GEAR: PARK
+  response: 7E9046255030D
