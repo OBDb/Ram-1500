@@ -92,7 +92,7 @@ test_cases:
     18DAF11021A6000000000100
 - expected_values:
     BP_A: BP_A_OL
-    BP_A_ACT: 84.65625
+    BP_A_ACT: 83.625
     BP_A_ACT_SUP: 1
     BP_A_CMD: 40
     BP_A_CMD_SUP: 1
@@ -104,7 +104,7 @@ test_cases:
     BP_B_SUP: 0
   response: |-
     18DAF110100C41700705000A
-    18DAF1102195000000000100
+    18DAF1102174000000000100
 - expected_values:
     BP_A: BP_A_CL
     BP_A_ACT: 86
