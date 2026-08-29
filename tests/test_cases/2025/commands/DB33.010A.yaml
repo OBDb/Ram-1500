@@ -4,6 +4,9 @@ test_cases:
     FP: 483
   response: 18DAF11003410AA1
 - expected_values:
+    FP: 507
+  response: 18DAF11003410AA9
+- expected_values:
     FP: 513
   response: 18DAF11003410AAB
 - expected_values:
