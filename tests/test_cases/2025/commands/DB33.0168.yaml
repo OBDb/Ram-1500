@@ -13,7 +13,7 @@ test_cases:
     18DAF11010094168033F5400
     18DAF1102100000000000000
 - expected_values:
-    IAT_11: 33
+    IAT_11: 29
     IAT_11_SUP: 1
     IAT_12: 35
     IAT_12_SUP: 1
@@ -22,7 +22,7 @@ test_cases:
     IAT_22_SUP: 0
     IAT_23_SUP: 0
   response: |-
-    18DAF1101009416803494B00
+    18DAF1101009416803454B00
     18DAF1102100000000000000
 - expected_values:
     IAT_11: 69
