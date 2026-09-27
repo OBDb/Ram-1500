@@ -1,4 +1,7 @@
-{ "commands": [
+{ "ecu": [
+    { "hdr": "7E1", "type": "transmission" }
+  ],
+  "commands": [
 { "hdr": "742", "rax": "4C2", "fcm1": true, "cmd": {"22": "A077"}, "freq": 5, "filter": { "to": 2017 }, "dbgfilter": { "to": 2012, "years": [2014] },
   "signals": [
     {"id": "1500_TP_FL", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 255, "nullmax": 255, "unit": "psi" }, "name": "Front left tire pressure",  "suggestedMetric": "frontLeftTirePressure"},
