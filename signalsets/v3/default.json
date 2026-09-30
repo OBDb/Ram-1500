@@ -9,11 +9,280 @@
     {"id": "1500_TP_RL", "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 255, "nullmax": 255, "unit": "psi" }, "name": "Rear left tire pressure",   "suggestedMetric": "rearLeftTirePressure"},
     {"id": "1500_TP_RR", "path": "Tires", "fmt": {"bix": 48, "len": 8, "max": 255, "nullmax": 255, "unit": "psi" }, "name": "Rear right tire pressure",  "suggestedMetric": "rearRightTirePressure"}
   ]},
-{ "hdr": "7E1", "rax": "7E9", "cmd": {"22": "04FE"}, "freq": 1, "dbgfilter": { "to": 2012, "years": [2014], "from": 2025 },
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "17"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_LINE_P_DUTY", "path": "Engine", "fmt": {           "len": 16, "max": 100, "div": 655, "unit": "percent" }, "name": "Line pressure duty cycle"},
+    {"id": "1500_LINE_P",      "path": "Engine", "fmt": {"bix": 16, "len": 8,  "max": 255,             "unit": "psi"     }, "name": "Line pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "18"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_ATF_T_V_2", "path": "Transmission", "fmt": { "len": 16, "max": 1023, "div": 64, "unit": "fahrenheit" }, "name": "Transmission fluid temperature v.2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "23"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_AAT",   "path": "Engine",  "fmt": {           "len": 16, "max": 1023, "div": 64, "unit": "fahrenheit" }, "name": "Ambient air temperature"},
+    {"id": "1500_BAT_T", "path": "Battery", "fmt": {"bix": 48, "len": 16, "max": 1023, "div": 64, "unit": "fahrenheit" }, "name": "Battery temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "2D"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_EOT_212D", "path": "Engine", "fmt": {"bix": 56, "len": 8, "max": 376, "min": -83, "mul": 9, "div": 5, "add": -83, "unit": "fahrenheit" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "3A"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_TRANS_SUMP_T_VAR_1",    "path": "Transmission", "fmt": {"bix": 80, "len": 8,  "max": 1020, "mul": 4,                        "unit": "fahrenheit" }, "name": "Transmission sump temperature, variant 1"},
+    {"id": "1500_TRANS_TQ_CONV_T_VAR_1", "path": "Transmission", "fmt": {"bix": 96, "len": 16, "max": 1875, "mul": 9, "div": 320, "add": 32, "unit": "fahrenheit" }, "name": "Transmission torque converter temperature, variant 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "A7"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_AC_HIGH_SIDE_P", "path": "Engine", "fmt": {"bix": 48, "len": 16, "max": 1191, "div": 55, "unit": "psi" }, "name": "Air conditioning high side pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "A8"}, "freq": 30, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_FLI", "path": "Fuel", "fmt": {"bix": 96, "len": 16, "max": 255, "div": 256, "unit": "percent" }, "name": "Fuel level"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "B3"}, "freq": 0.25, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_RADIATOR_FAN_SPD", "path": "Movement", "fmt": {"bix": 80, "len": 8, "max": 132600, "mul": 520, "unit": "rpm" }, "name": "Radiator fan speed"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "CA"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_OUTPUT_SHFT_SPD",       "path": "Movement",     "fmt": {"bix": 64, "len": 16, "max": 8191,           "div": 8,              "unit": "rpm"        }, "name": "Output shaft speed"},
+    {"id": "1500_TRANS_SUMP_T_VAR_2",    "path": "Transmission", "fmt": {"bix": 80, "len": 8,  "max": 1020, "mul": 4,                        "unit": "fahrenheit" }, "name": "Transmission sump temperature, variant 2"},
+    {"id": "1500_TRANS_TQ_CONV_T_VAR_2", "path": "Transmission", "fmt": {"bix": 96, "len": 16, "max": 1875, "mul": 9, "div": 320, "add": 32, "unit": "fahrenheit" }, "name": "Transmission torque converter temperature, variant 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "D2"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_EOT_21D2", "path": "Engine", "fmt": {"bix": 56, "len": 8, "max": 191, "min": -64, "add": -64, "unit": "celsius" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0109"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_BAROMETRIC_P", "path": "Engine", "fmt": { "len": 16, "max": 19005.1499, "mul": 29, "div": 100, "unit": "psi" }, "name": "Barometric pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0127"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_AAT_2", "path": "Engine", "fmt": { "len": 8, "max": 376, "min": -83, "mul": 9, "div": 5, "add": -83, "unit": "fahrenheit" }, "name": "Ambient temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "012B"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_CAT_MODEL_T", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 191, "min": -64, "add": -64, "unit": "celsius" }, "name": "Catalyst modeled temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0174"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_MAP", "path": "Engine", "fmt": { "len": 16, "max": 13107, "div": 5, "unit": "kilopascal" }, "name": "Intake manifold air pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "01A9"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_KNOCK_SENS_1", "path": "Engine", "fmt": { "len": 16, "max": 5, "div": 13107, "unit": "volts" }, "name": "Knock sensor 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "01AA"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_KNOCK_SENS_2", "path": "Engine", "fmt": { "len": 16, "max": 5, "div": 13107, "unit": "volts" }, "name": "Knock sensor 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "01AE"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_SHORT_TERM_KNOCK", "path": "Engine", "fmt": { "len": 16, "max": 32767.5, "div": 2, "unit": "degrees" }, "name": "Short term knock retard"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "01FF"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_IAT_01FF", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 191, "min": -64, "add": -64, "unit": "celsius" }, "name": "Intake manifold air temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0227"}, "freq": 30, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_FLI_INPUT", "path": "Fuel", "fmt": { "len": 8, "max": 100, "unit": "percent" }, "name": "Fuel level input", "suggestedMetric": "fuelTankLevel"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "022A"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_EOP", "path": "Engine", "fmt": { "len": 8, "max": 147.8999, "mul": 29, "div": 50, "unit": "psi" }, "name": "Engine oil pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0234"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_INJ_WIDTH_CYL_1", "path": "Engine", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "milliseconds" }, "name": "Injector pulse width, cylinder 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0235"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_INJ_WIDTH_CYL_2", "path": "Engine", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "milliseconds" }, "name": "Injector pulse width, cylinder 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0236"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_INJ_WIDTH_CYL_3", "path": "Engine", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "milliseconds" }, "name": "Injector pulse width, cylinder 3"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0237"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_INJ_WIDTH_CYL_4", "path": "Engine", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "milliseconds" }, "name": "Injector pulse width, cylinder 4"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0329"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_AC_HIGH_SIDE_P_2", "path": "Engine", "fmt": { "len": 8, "max": 3570, "mul": 14, "unit": "kilopascal" }, "name": "Air conditioning high side pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "03BC"}, "freq": 30, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_ODO_03BC", "path": "Trips", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "040F"}, "freq": 30, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_FLI_7E0", "path": "Fuel", "fmt": { "len": 16, "max": 18637, "min": -18638, "mul": 711, "div": 1250, "sign": true, "unit": "liters" }, "name": "Fuel level"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "043B"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_ODO", "path": "Trips", "fmt": { "len": 16, "max": 536862.72, "mul": 8.192, "unit": "miles" }, "name": "Odometer", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "059E"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_CAM_CRANK_DIFF", "path": "Engine", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "degrees" }, "name": "Cam crank difference"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "061B"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_EXH_CAM_1_OFFSET", "path": "Engine", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "degrees" }, "name": "Exhaust camshaft 1 to crankshaft offset"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "069E"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_VARIABLE_VLV_TIM_OIL_P", "path": "Engine", "fmt": { "len": 8, "max": 1020, "mul": 4, "unit": "kilopascal" }, "name": "Variable valve timing oil pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "069F"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_VARIABLE_VLV_TIM_OIL_T", "path": "Engine", "fmt": { "len": 8, "max": 191, "min": -64, "add": -64, "unit": "celsius" }, "name": "Variable valve timing oil temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "06C2"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_INT_CAM_1_OFFSET", "path": "Engine", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "degrees" }, "name": "Intake camshaft 1 to crankshaft offset"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "06F3"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_FUEL_RAIL_P_06F3", "path": "Fuel", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "unknown" }, "name": "Fuel rail pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0944"}, "freq": 0.25, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_BRAKE_BOOSTER_P", "path": "Control", "fmt": { "len": 16, "max": 327.67, "min": -327.68, "div": 100, "sign": true, "unit": "kilopascal" }, "name": "Brake booster pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0ECA"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_MDS_ACTIVE", "path": "Engine", "fmt": {"bix": 4, "len": 1, "max": 1, "unit": "offon" }, "name": "Multi-displacement system active"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1247"}, "freq": 0.25, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_THROTTLE_INLET_P", "path": "Engine", "fmt": { "len": 16, "max": 409.5937, "div": 160, "unit": "kilopascal" }, "name": "Throttle inlet pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "12C9"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_LOW_SIDE_ECT", "path": "Engine", "fmt": { "len": 8, "max": 191, "min": -64, "add": -64, "unit": "celsius" }, "name": "Low side coolant temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "14B1"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_THROTTLE_INLET_AIR_T", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 191, "min": -64, "add": -64, "unit": "celsius" }, "name": "Throttle inlet air temperature filtered"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "14B3"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_THROTTLE_INLET_AIR_T_RAW", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 191, "min": -64, "add": -64, "unit": "celsius" }, "name": "Throttle inlet air temperature raw"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1737"}, "freq": 0.25, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_FL_WHL_SPD", "path": "Tires", "fmt": { "len": 16, "max": 1023.9843, "div": 64, "unit": "kilometersPerHour" }, "name": "Front left wheel speed"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1738"}, "freq": 0.25, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_FR_WHL_SPD", "path": "Tires", "fmt": { "len": 16, "max": 1023.9843, "div": 64, "unit": "kilometersPerHour" }, "name": "Front right wheel speed"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1739"}, "freq": 0.25, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_RL_WHL_SPD", "path": "Tires", "fmt": { "len": 16, "max": 1023.9843, "div": 64, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "173A"}, "freq": 0.25, "filter": { "to": 2024 }, "dbgfilter": { "to": 2021, "from": 2023 },
+  "signals": [
+    {"id": "1500_RR_WHL_SPD", "path": "Tires", "fmt": { "len": 16, "max": 1023.9843, "div": 64, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1F59"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_WASTEGATE_POS_SENS", "path": "Engine", "fmt": { "len": 16, "max": 319.8107, "mul": 61, "div": 12500, "unit": "volts" }, "name": "Wastegate position sensor"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "70B8"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_IAT_70B8", "path": "Engine", "fmt": { "len": 16, "max": 1260.2976, "min": -40, "mul": 0.0198412698, "add": -40, "unit": "celsius" }, "name": "Intake manifold air temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A001"}, "freq": 0.25, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_TQ_CONV_SLIP_VAR_2", "path": "Transmission", "fmt": {"bix": 48, "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "rpm" }, "name": "Torque converter slip, variant 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A002"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_ATF_T_VAR_2", "path": "Transmission", "fmt": { "len": 8, "max": 401, "min": -58, "mul": 9, "div": 5, "add": -58, "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variant 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A043"}, "freq": 30, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_FLI_AVG", "path": "Fuel", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Fuel level average"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A09F"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_GEAR_CMD", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission gear, commanded"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0A0"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_GEAR_7E0", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission gear, actual"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0A3"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_TRANS_SUMP_T", "path": "Transmission", "fmt": { "len": 16, "max": 921, "mul": 9, "div": 640, "unit": "fahrenheit" }, "name": "Transmission sump temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0A4"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_TRANS_TQ_CONV_T", "path": "Transmission", "fmt": { "len": 16, "max": 1843, "mul": 9, "div": 320, "unit": "fahrenheit" }, "name": "Transmission torque converter temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B010"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_ATF_T_VAR_1", "path": "Transmission", "fmt": { "len": 16, "max": 1023, "div": 64, "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variant 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B028"}, "freq": 0.25, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_TQ_CONV_SLIP_VAR_1", "path": "Transmission", "fmt": { "len": 16, "max": 460, "min": -460, "mul": 9, "div": 640, "sign": true, "unit": "rpm" }, "name": "Torque converter slip, variant 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B09B"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_TQ_CONV_LOCK", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Torque converter lock status"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "0A"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_TRANS_T_VAR_2", "path": "Transmission", "fmt": {"bix": 128, "len": 8, "max": 401, "min": -58, "mul": 9, "div": 5, "add": -58, "unit": "fahrenheit" }, "name": "Transmission temperature, variant 2"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "fcm1": true, "dbg": true, "cmd": {"21": "18"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_ATF_T_3RDGEN", "path": "Engine", "fmt": { "len": 16, "max": 983.9843, "min": -40, "div": 64, "add": -40, "unit": "fahrenheit" }, "name": "Automatic transmission fluid temperature"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "30"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_ATF_T_2130", "path": "Transmission", "fmt": {"bix": 88, "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Transmission fluid temperature, variant 3"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "3A"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_TRANS_SUMP_T_7E1", "path": "Transmission", "fmt": {"bix": 72, "len": 16, "max": 1023, "div": 64, "unit": "fahrenheit" }, "name": "Transmission sump temperature"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "fcm1": true, "dbg": true, "cmd": {"21": "5C"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_ATF_T_3RDGEN_V2", "path": "Engine", "fmt": {"bix": 32, "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Automatic transmission fluid temperature"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "72"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_ATF_T_7E1", "path": "Transmission", "fmt": {"bix": 32, "len": 16, "max": 1023, "div": 64, "unit": "fahrenheit" }, "name": "Transmission fluid temperature"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "cmd": {"22": "04FE"}, "freq": 1, "filter": { "to": 2024 }, "dbgfilter": { "to": 2012, "years": [2014] },
   "signals": [
     {"id": "1500_ATF_T", "path": "Transmission", "fmt": { "len": 8, "max": 300, "min": -30, "mul": 1.8, "add": -40, "unit": "fahrenheit" }, "name": "Transmission fluid temperature", "suggestedMetric": "transmissionFluidTemperature"}
   ]},
-{ "hdr": "7E1", "rax": "7E9", "fcm1": true, "cmd": {"22": "5503"}, "freq": 1, "dbgfilter": { "to": 2012, "years": [2014], "from": 2025 },
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "08DF"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_ATF_T_08DF", "path": "Transmission", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature", "suggestedMetric": "transmissionFluidTemperature"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "3C22"}, "freq": 0.25, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_CURRENT_GEAR", "path": "Transmission", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "scalar" }, "name": "Current gear"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "5034"}, "freq": 1, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_MAIN_CYL_P", "path": "Engine", "fmt": { "len": 16, "max": 6513, "min": -40, "div": 10, "add": -40, "unit": "bars" }, "name": "AT main cylinder pressure"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "5043"}, "freq": 5, "filter": { "to": 2024 },
+  "signals": [
+    {"id": "1500_ATF_T_7E1_7E1", "path": "Transmission", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "fcm1": true, "cmd": {"22": "5503"}, "freq": 1, "filter": { "to": 2024 }, "dbgfilter": { "to": 2012, "years": [2014] },
   "signals": [
     {"id": "1500_GEAR", "path": "Transmission", "name": "Current gear", "description": "The automatic transmission gear.", "fmt": {"bix": 4, "len": 4, "map": {
           "0":  { "description": "Neutral",      "value": "NEUTRAL" },
@@ -32,7 +301,7 @@
         }}
     }
   ]},
-{ "hdr": "7E1", "rax": "7E9", "fcm1": true, "cmd": {"22": "5504"}, "freq": 1, "dbgfilter": { "to": 2012, "years": [2014], "from": 2025 },
+{ "hdr": "7E1", "rax": "7E9", "fcm1": true, "cmd": {"22": "5504"}, "freq": 1, "filter": { "to": 2024 }, "dbgfilter": { "to": 2012, "years": [2014] },
   "signals": [
     {"id": "1500_GEAR_TARGET", "path": "Transmission", "name": "Target gear", "description": "The target gear.", "fmt": {"bix": 4, "len": 4, "map": {
           "0":  { "description": "Neutral",      "value": "NEUTRAL" },
@@ -50,6 +319,167 @@
           "13": { "description": "Park",         "value": "PARK" }
         }}
     }
+  ]},
+{ "hdr": "DA10", "rax": "10", "dbg": true, "cmd": {"21": "18"}, "freq": 1, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_TOT", "path": "Transmission", "fmt": { "len": 16, "max": 512, "min": -512, "div": 4, "sign": true, "unit": "fahrenheit" }, "name": "Transmission oil temperature", "suggestedMetric": "transmissionFluidTemperature"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "1000"}, "freq": 1, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_RPM", "path": "Engine", "fmt": { "len": 16, "max": 16383, "div": 4, "unit": "rpm" }, "name": "Engine RPM"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "1002"}, "freq": 30, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_ENGINE_STATUS", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Engine operational status"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "1003"}, "freq": 5, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_ECT_ECU", "path": "Engine", "fmt": { "len": 16, "max": 200, "min": -40, "mul": 2, "div": 100, "add": -40, "unit": "celsius" }, "name": "Coolant temperature", "suggestedMetric": "engineCoolantTemperature"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "190B"}, "freq": 0.25, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_VSS_ECU", "path": "Movement", "fmt": { "len": 16, "max": 300, "unit": "kilometersPerHour" }, "name": "Vehicle speed, engine computer", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "192D"}, "freq": 1, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_GEAR_ECU", "path": "Transmission", "fmt": { "len": 8, "max": 9, "unit": "scalar" }, "name": "Gear engaged"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "1935"}, "freq": 5, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_IAT_TURBO", "path": "Engine", "fmt": { "len": 16, "max": 200, "min": -40, "mul": 2, "div": 100, "add": -40, "unit": "celsius" }, "name": "IAT post-intercooler"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "193F"}, "freq": 5, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_MAF_TEMP", "path": "Engine", "fmt": { "len": 16, "max": 200, "min": -40, "mul": 2, "div": 100, "add": -40, "unit": "celsius" }, "name": "Mass airflow sensor temperature"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "1946"}, "freq": 1, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_RAIL_PRESS_CMD", "path": "Engine", "fmt": { "len": 16, "max": 3000, "div": 20, "unit": "bars" }, "name": "Fuel rail pressure commanded"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "1947"}, "freq": 1, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_RAIL_PRESS", "path": "Engine", "fmt": { "len": 16, "max": 3000, "div": 20, "unit": "bars" }, "name": "Fuel rail pressure measured"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "194F"}, "freq": 30, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_OIL_PUMP", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Variable oil pump position"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "1955"}, "freq": 30, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_BATT_V_ECU", "path": "Battery", "fmt": { "len": 16, "max": 20, "div": 2000, "unit": "volts" }, "name": "Battery voltage"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "195A"}, "freq": 1, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_BOOST", "path": "Engine", "fmt": { "len": 16, "max": 300, "min": -100, "div": 10, "add": -3276.8, "unit": "kilopascal" }, "name": "Turbo boost pressure"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "04FE"}, "freq": 1, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_ATF_T_4THGEN", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Automatic transmission fluid temperature"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "051A"}, "freq": 0.5, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_GEAR_DESIRED", "path": "Transmission", "fmt": {          "len": 4, "max": 15, "nullmin": 0, "nullmax": 13, "unit": "scalar" }, "name": "Desired gear"},
+    {"id": "1500_GEAR_CURRENT", "path": "Transmission", "fmt": {"bix": 4, "len": 4, "max": 15, "nullmin": 0, "nullmax": 13, "unit": "scalar" }, "name": "Current gear"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "1018"}, "freq": 2, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_TCM_TORQUE", "path": "Transmission", "fmt": { "len": 16, "max": 1000, "min": -500, "add": -500, "unit": "newtonMeters" }, "name": "Transmission reported torque"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "2024"}, "freq": 86400, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_TIRE_SIZE", "path": "Tires", "fmt": {"bix": 64, "len": 16, "max": 65535, "unit": "millimeters" }, "name": "Tire size"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "2102"}, "freq": 1, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_GEARBOX_RPM", "path": "Transmission", "fmt": { "len": 16, "max": 16383, "div": 4, "unit": "rpm" }, "name": "Gearbox output speed"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "2B1B"}, "freq": 1, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_WSS_RR", "path": "Movement", "fmt": { "len": 16, "max": 300, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "2B1C"}, "freq": 1, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_WSS_RL", "path": "Movement", "fmt": { "len": 16, "max": 300, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "2B1D"}, "freq": 1, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_WSS_FR", "path": "Movement", "fmt": { "len": 16, "max": 300, "unit": "kilometersPerHour" }, "name": "Front right wheel speed"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "2B1E"}, "freq": 1, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_WSS_FL", "path": "Movement", "fmt": { "len": 16, "max": 300, "unit": "kilometersPerHour" }, "name": "Front left wheel speed"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "F158"}, "freq": 86400, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_MODEL_YEAR", "path": "Details", "fmt": { "len": 8, "max": 2225, "add": 2000, "unit": "scalar" }, "name": "Model year"}
+  ]},
+{ "hdr": "DA30", "rax": "30", "dbg": true, "cmd": {"22": "0885"}, "freq": 0.1, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_STEER_ANGLE", "path": "Control", "fmt": { "len": 16, "max": 720, "min": -720, "div": 10, "add": -720, "unit": "degrees" }, "name": "Steering wheel angle"}
+  ]},
+{ "hdr": "DA30", "rax": "30", "dbg": true, "cmd": {"22": "2962"}, "freq": 0.1, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_LAT_G",  "path": "Orientation", "fmt": {"bix": 4,   "len": 12, "max": 40.94, "min": -40.94, "div": 50, "add": -40.96, "nullmax": 40, "unit": "metersPerSecondSquared" }, "name": "Lateral acceleration"},
+    {"id": "1500_LNG_G",  "path": "Orientation", "fmt": {"bix": 20,  "len": 12, "max": 40.94, "min": -40.94, "div": 50, "add": -40.96, "nullmax": 40, "unit": "metersPerSecondSquared" }, "name": "Longitudinal acceleration"},
+    {"id": "1500_FL_VSS", "path": "Movement",    "fmt": {"bix": 112, "len": 16, "max": 4095,                 "div": 16,                               "unit": "kilometersPerHour"      }, "name": "Front left wheel speed"},
+    {"id": "1500_RL_VSS", "path": "Movement",    "fmt": {"bix": 144, "len": 16, "max": 4095,                 "div": 16,                               "unit": "kilometersPerHour"      }, "name": "Rear left wheel speed"},
+    {"id": "1500_FR_VSS", "path": "Movement",    "fmt": {"bix": 176, "len": 16, "max": 4095,                 "div": 16,                               "unit": "kilometersPerHour"      }, "name": "Front right wheel speed"},
+    {"id": "1500_RR_VSS", "path": "Movement",    "fmt": {"bix": 208, "len": 16, "max": 4095,                 "div": 16,                               "unit": "kilometersPerHour"      }, "name": "Rear right wheel speed"}
+  ]},
+{ "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "1004"}, "freq": 30, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_BATT_V_BCM", "path": "Battery", "fmt": { "len": 8, "max": 25, "div": 10, "unit": "volts" }, "name": "Battery voltage, BCM"}
+  ]},
+{ "hdr": "DAC7", "rax": "C7", "dbg": true, "cmd": {"22": "0123"}, "freq": 86400, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_TID_FL", "path": "Tires", "fmt": { "len": 32, "max": 4294967295, "unit": "hex" }, "name": "Front left tire sensor id"}
+  ]},
+{ "hdr": "DAC7", "rax": "C7", "dbg": true, "cmd": {"22": "0124"}, "freq": 86400, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_TID_FR", "path": "Tires", "fmt": { "len": 32, "max": 4294967295, "unit": "hex" }, "name": "Front right tire sensor id"}
+  ]},
+{ "hdr": "DAC7", "rax": "C7", "dbg": true, "cmd": {"22": "0125"}, "freq": 86400, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_TID_RL", "path": "Tires", "fmt": { "len": 32, "max": 4294967295, "unit": "hex" }, "name": "Rear left tire sensor id"}
+  ]},
+{ "hdr": "DAC7", "rax": "C7", "dbg": true, "cmd": {"22": "0127"}, "freq": 86400, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_TID_RR", "path": "Tires", "fmt": { "len": 32, "max": 4294967295, "unit": "hex" }, "name": "Rear right tire sensor id"}
+  ]},
+{ "hdr": "DAC7", "rax": "C7", "dbg": true, "cmd": {"22": "012F"}, "freq": 5, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_TP_RL_INVALID", "path": "Tires", "fmt": {"bix": 4, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear left tire pressure invalid?"},
+    {"id": "1500_TP_RR_INVALID", "path": "Tires", "fmt": {"bix": 5, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear right tire pressure invalid?"},
+    {"id": "1500_TP_FR_INVALID", "path": "Tires", "fmt": {"bix": 6, "len": 1, "max": 1, "unit": "noyes" }, "name": "Front right tire pressure invalid?"},
+    {"id": "1500_TP_FL_INVALID", "path": "Tires", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Front left tire pressure invalid?"}
+  ]},
+{ "hdr": "DAC7", "rax": "C7", "dbg": true, "cmd": {"22": "013C"}, "freq": 5, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_TP_FL_2", "path": "Tires", "fmt": {           "len": 16, "max": 65.535,             "div": 1000,             "nullmin": 0,   "unit": "bars"    }, "name": "Front left tire pressure",    "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "1500_TT_FL",   "path": "Tires", "fmt": {"bix": 16, "len": 8,  "max": 205,    "min": -50,              "add": -50, "nullmin": -50, "unit": "celsius" }, "name": "Front left tire temperature", "suggestedMetric": "frontLeftTireTemperature"}
+  ]},
+{ "hdr": "DAC7", "rax": "C7", "dbg": true, "cmd": {"22": "013D"}, "freq": 5, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_TP_FR_2", "path": "Tires", "fmt": {           "len": 16, "max": 65.535,             "div": 1000,             "nullmin": 0,   "unit": "bars"    }, "name": "Front right tire pressure",    "suggestedMetric": "frontRightTirePressure"},
+    {"id": "1500_TT_FR",   "path": "Tires", "fmt": {"bix": 16, "len": 8,  "max": 205,    "min": -50,              "add": -50, "nullmin": -50, "unit": "celsius" }, "name": "Front right tire temperature", "suggestedMetric": "frontRightTireTemperature"}
+  ]},
+{ "hdr": "DAC7", "rax": "C7", "dbg": true, "cmd": {"22": "013E"}, "freq": 5, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_TP_RL_2", "path": "Tires", "fmt": {           "len": 16, "max": 65.535,             "div": 1000,             "nullmin": 0,   "unit": "bars"    }, "name": "Rear left tire pressure",    "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "1500_TT_RL",   "path": "Tires", "fmt": {"bix": 16, "len": 8,  "max": 205,    "min": -50,              "add": -50, "nullmin": -50, "unit": "celsius" }, "name": "Rear left tire temperature", "suggestedMetric": "rearLeftTireTemperature"}
+  ]},
+{ "hdr": "DAC7", "rax": "C7", "dbg": true, "cmd": {"22": "013F"}, "freq": 5, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_TP_RR_2", "path": "Tires", "fmt": {           "len": 16, "max": 65.535,             "div": 1000,             "nullmin": 0,   "unit": "bars"    }, "name": "Rear right tire pressure",    "suggestedMetric": "rearRightTirePressure"},
+    {"id": "1500_TT_RR",   "path": "Tires", "fmt": {"bix": 16, "len": 8,  "max": 205,    "min": -50,              "add": -50, "nullmin": -50, "unit": "celsius" }, "name": "Rear right tire temperature", "suggestedMetric": "rearRightTireTemperature"}
+  ]},
+{ "hdr": "DAC7", "rax": "C7", "dbg": true, "cmd": {"22": "0302"}, "freq": 1, "filter": { "from": 2025 },
+  "signals": [
+    {"id": "1500_RRD_OPEN",            "path": "Doors", "fmt": {"bix": 3, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear right door open"},
+    {"id": "1500_RLD_OPEN",            "path": "Doors", "fmt": {"bix": 4, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear left door open"},
+    {"id": "1500_PASSENGER_DOOR_OPEN", "path": "Doors", "fmt": {"bix": 5, "len": 1, "max": 1, "unit": "noyes" }, "name": "Passenger door open"},
+    {"id": "1500_DRIVER_DOOR_OPEN",    "path": "Doors", "fmt": {"bix": 6, "len": 1, "max": 1, "unit": "noyes" }, "name": "Driver door open"},
+    {"id": "1500_TRUNK_OPEN",          "path": "Doors", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Trunk open"}
   ]}
 ]
 }
