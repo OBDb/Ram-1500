@@ -87,7 +87,7 @@ supported_commands_by_ecu:
   - 7E1.225504
   - 7E1.7E9.010D
   - 7E1.7E9.0131
-  - 7E1.7E9.2204FE:1500_ATF_T
+  - 7E1.7E9.2204FE|f=-2024:1500_ATF_T
 unsupported_commands_by_ecu:
   "6B4":
   - 6B4.694.22D410
@@ -111,9 +111,9 @@ unsupported_commands_by_ecu:
   - 7DA.22A022
   - 7DA.22A023
   "7E0":
-  - 7E0.7E8.2118
+  - 7E0.7E8.2118|f=-2024:1500_ATF_T_V_2
   "7E1":
-  - 7E1.7E9.2118
+  - 7E1.7E9.2118|fc=1,f=-2024:1500_ATF_T_3RDGEN
   "7F1":
   - 7F1.2240B1
   - 7F1.2240B2
