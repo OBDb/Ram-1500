@@ -59,7 +59,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0109"}, "freq": 1, "filter": { "to": 2024 },
   "signals": [
-    {"id": "1500_BAROMETRIC_P", "path": "Engine", "fmt": { "len": 16, "max": 19005.1499, "mul": 29, "div": 100, "unit": "psi" }, "name": "Barometric pressure"}
+    {"id": "1500_BAROMETRIC_P", "path": "Engine", "fmt": { "len": 16, "max": 13107, "div": 5, "unit": "kilopascal" }, "name": "Barometric pressure"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0127"}, "freq": 5, "filter": { "to": 2024 },
   "signals": [
