@@ -69,7 +69,7 @@
   "signals": [
     {"id": "1500_CAT_MODEL_T", "path": "Engine", "fmt": { "len": 16, "max": 1000, "unit": "celsius" }, "name": "Catalyst modeled temperature"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "0174"}, "freq": 1, "filter": { "to": 2024 }, "dbgfilter": { "to": 2018, "from": 2020 },
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "0174"}, "freq": 1, "filter": { "to": 2024 }, "dbgfilter": { "to": 2016, "years": [2018], "from": 2020 },
   "signals": [
     {"id": "1500_MAP", "path": "Engine", "fmt": { "len": 16, "max": 13107, "div": 5, "unit": "kilopascal" }, "name": "Intake manifold air pressure"}
   ]},
@@ -117,11 +117,11 @@
   "signals": [
     {"id": "1500_AC_HIGH_SIDE_P_2", "path": "Engine", "fmt": { "len": 8, "max": 3570, "mul": 14, "unit": "kilopascal" }, "name": "Air conditioning high side pressure"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "03BC"}, "freq": 30, "filter": { "to": 2024 },
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "03BC"}, "freq": 30, "filter": { "to": 2024 }, "dbgfilter": { "to": 2016, "from": 2018 },
   "signals": [
     {"id": "1500_ODO_03BC", "path": "Trips", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "040F"}, "freq": 30, "filter": { "to": 2024 }, "dbgfilter": { "to": 2018, "from": 2020 },
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "040F"}, "freq": 30, "filter": { "to": 2024 }, "dbgfilter": { "to": 2016, "years": [2018], "from": 2020 },
   "signals": [
     {"id": "1500_FLI_7E0", "path": "Fuel", "fmt": { "len": 16, "max": 18637, "min": -18638, "mul": 711, "div": 1250, "sign": true, "unit": "liters" }, "name": "Fuel level"}
   ]},
@@ -277,11 +277,11 @@
   "signals": [
     {"id": "1500_CURRENT_GEAR", "path": "Transmission", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "scalar" }, "name": "Current gear"}
   ]},
-{ "hdr": "7E1", "rax": "7E9", "cmd": {"22": "5034"}, "freq": 1, "filter": { "to": 2024 }, "dbgfilter": { "to": 2018, "from": 2020 },
+{ "hdr": "7E1", "rax": "7E9", "cmd": {"22": "5034"}, "freq": 1, "filter": { "to": 2024 }, "dbgfilter": { "to": 2016, "years": [2018], "from": 2020 },
   "signals": [
     {"id": "1500_MAIN_CYL_P", "path": "Engine", "fmt": { "len": 16, "max": 6513, "min": -40, "div": 10, "add": -40, "unit": "bars" }, "name": "AT main cylinder pressure"}
   ]},
-{ "hdr": "7E1", "rax": "7E9", "cmd": {"22": "5043"}, "freq": 5, "filter": { "to": 2024 }, "dbgfilter": { "to": 2018, "from": 2020 },
+{ "hdr": "7E1", "rax": "7E9", "cmd": {"22": "5043"}, "freq": 5, "filter": { "to": 2024 }, "dbgfilter": { "to": 2016, "years": [2018], "from": 2020 },
   "signals": [
     {"id": "1500_ATF_T_7E1_7E1", "path": "Transmission", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature"}
   ]},
