@@ -1,0 +1,8 @@
+command_id: 7E0.7E8.221247|f=-2024
+test_cases:
+- expected_values:
+    1500_THROTTLE_INLET_P: 97.79375
+  response: 7E8056212473D1F
+- expected_values:
+    1500_THROTTLE_INLET_P: 97.84375
+  response: 7E8056212473D27

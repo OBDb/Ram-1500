@@ -1,0 +1,8 @@
+command_id: 7E0.7E8.220234|f=-2024
+test_cases:
+- expected_values:
+    1500_INJ_WIDTH_CYL_1: 5.92
+  response: '7E80762023400001720'
+- expected_values:
+    1500_INJ_WIDTH_CYL_1: 6.776
+  response: 7E80762023400001A78
