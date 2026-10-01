@@ -1,5 +1,8 @@
 { "ecu": [
-    { "hdr": "7E1", "type": "transmission" }
+    { "hdr": "7E0",  "type": "engine" },
+    { "hdr": "7E1",  "type": "transmission" },
+    { "hdr": "DA10", "type": "engine" },
+    { "hdr": "DA18", "type": "transmission" }
   ],
   "commands": [
 { "hdr": "742", "rax": "4C2", "fcm1": true, "cmd": {"22": "A077"}, "freq": 5, "filter": { "to": 2017 }, "dbgfilter": { "to": 2012, "years": [2014] },
