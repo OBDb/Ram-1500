@@ -1,0 +1,5 @@
+command_id: 7E0.7E8.221738|f=-2024
+test_cases:
+- expected_values:
+    1500_FR_WHL_SPD: 49
+  response: 7E8056217380C40
