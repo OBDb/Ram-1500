@@ -3,3 +3,15 @@ test_cases:
 - expected_values:
     1500_IAT_01FF: 32
   response: 7E8056201FF0060
+- expected_values:
+    1500_IAT_01FF: 36
+  response: 7E8056201FF0064
+- expected_values:
+    1500_IAT_01FF: 38
+  response: 7E8056201FF0066
+- expected_values:
+    1500_IAT_01FF: 39
+  response: 7E8056201FF0067
+- expected_values:
+    1500_IAT_01FF: 42
+  response: 7E8056201FF006A
