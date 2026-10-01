@@ -1,8 +1,32 @@
 command_id: 7E0.7E8.220329|f=-2024
 test_cases:
 - expected_values:
+    1500_AC_HIGH_SIDE_P_2: 868
+  response: 7E8046203293E
+- expected_values:
     1500_AC_HIGH_SIDE_P_2: 966
   response: '7E80462032945'
 - expected_values:
+    1500_AC_HIGH_SIDE_P_2: 1050
+  response: 7E8046203294B
+- expected_values:
     1500_AC_HIGH_SIDE_P_2: 1162
   response: '7E80462032953'
+- expected_values:
+    1500_AC_HIGH_SIDE_P_2: 1190
+  response: '7E80462032955'
+- expected_values:
+    1500_AC_HIGH_SIDE_P_2: 1400
+  response: '7E80462032964'
+- expected_values:
+    1500_AC_HIGH_SIDE_P_2: 1498
+  response: 7E8046203296B
+- expected_values:
+    1500_AC_HIGH_SIDE_P_2: 1512
+  response: 7E8046203296C
+- expected_values:
+    1500_AC_HIGH_SIDE_P_2: 1540
+  response: 7E8046203296E
+- expected_values:
+    1500_AC_HIGH_SIDE_P_2: 1708
+  response: 7E8046203297A

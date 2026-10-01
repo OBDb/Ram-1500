@@ -1,8 +1,26 @@
 command_id: 7E0.7E8.221738|f=-2024
 test_cases:
 - expected_values:
+    1500_FR_WHL_SPD: 0
+  response: '7E8056217380000'
+- expected_values:
+    1500_FR_WHL_SPD: 9.70312
+  response: 7E805621738026D
+- expected_values:
     1500_FR_WHL_SPD: 18.42188
   response: 7E805621738049B
 - expected_values:
+    1500_FR_WHL_SPD: 23.40625
+  response: 7E80562173805DA
+- expected_values:
     1500_FR_WHL_SPD: 54.84375
   response: 7E8056217380DB6
+- expected_values:
+    1500_FR_WHL_SPD: 55.82812
+  response: 7E8056217380DF5
+- expected_values:
+    1500_FR_WHL_SPD: 61.9375
+  response: 7E8056217380F7C
+- expected_values:
+    1500_FR_WHL_SPD: 64.75
+  response: '7E8056217381030'
