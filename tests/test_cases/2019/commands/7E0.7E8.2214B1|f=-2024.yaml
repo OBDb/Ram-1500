@@ -1,0 +1,5 @@
+command_id: 7E0.7E8.2214B1|f=-2024
+test_cases:
+- expected_values:
+    1500_THROTTLE_INLET_AIR_T: 29
+  response: 7E8056214B1005D

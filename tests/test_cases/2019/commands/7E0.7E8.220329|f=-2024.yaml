@@ -1,0 +1,5 @@
+command_id: 7E0.7E8.220329|f=-2024
+test_cases:
+- expected_values:
+    1500_AC_HIGH_SIDE_P_2: 854
+  response: 7E8046203293D
