@@ -1,0 +1,8 @@
+command_id: 7E0.7E8.221737|f=-2024
+test_cases:
+- expected_values:
+    1500_FL_WHL_SPD: 18.28125
+  response: '7E8056217370492'
+- expected_values:
+    1500_FL_WHL_SPD: 54.42188
+  response: 7E8056217370D9B

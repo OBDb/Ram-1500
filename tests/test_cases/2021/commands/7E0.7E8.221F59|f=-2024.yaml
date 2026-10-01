@@ -1,0 +1,5 @@
+command_id: 7E0.7E8.221F59|f=-2024
+test_cases:
+- expected_values:
+    1500_WASTEGATE_POS_SENS: 0
+  response: 7E805621F590000
