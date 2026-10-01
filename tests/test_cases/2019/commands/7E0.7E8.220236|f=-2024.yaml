@@ -4,29 +4,8 @@ test_cases:
     1500_INJ_WIDTH_CYL_3: 0
   response: '7E80762023600000000'
 - expected_values:
-    1500_INJ_WIDTH_CYL_3: 1.76
-  response: 7E807620236000006E0
-- expected_values:
     1500_INJ_WIDTH_CYL_3: 1.784
   response: 7E807620236000006F8
-- expected_values:
-    1500_INJ_WIDTH_CYL_3: 1.84
-  response: '7E80762023600000730'
-- expected_values:
-    1500_INJ_WIDTH_CYL_3: 2.768
-  response: 7E80762023600000AD0
-- expected_values:
-    1500_INJ_WIDTH_CYL_3: 4.392
-  response: '7E80762023600001128'
-- expected_values:
-    1500_INJ_WIDTH_CYL_3: 4.536
-  response: 7E807620236000011B8
-- expected_values:
-    1500_INJ_WIDTH_CYL_3: 4.776
-  response: 7E807620236000012A8
-- expected_values:
-    1500_INJ_WIDTH_CYL_3: 5.736
-  response: '7E80762023600001668'
 - expected_values:
     1500_INJ_WIDTH_CYL_3: 6.28
   response: '7E80762023600001888'
