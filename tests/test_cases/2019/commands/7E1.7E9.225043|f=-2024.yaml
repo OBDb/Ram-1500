@@ -3,3 +3,24 @@ test_cases:
 - expected_values:
     1500_ATF_T_7E1_7E1: 58
   response: '7E90462504362'
+- expected_values:
+    1500_ATF_T_7E1_7E1: 64
+  response: '7E90462504368'
+- expected_values:
+    1500_ATF_T_7E1_7E1: 68
+  response: 7E9046250436C
+- expected_values:
+    1500_ATF_T_7E1_7E1: 72
+  response: '7E90462504370'
+- expected_values:
+    1500_ATF_T_7E1_7E1: 76
+  response: '7E90462504374'
+- expected_values:
+    1500_ATF_T_7E1_7E1: 78
+  response: '7E90462504376'
+- expected_values:
+    1500_ATF_T_7E1_7E1: 83
+  response: 7E9046250437B
+- expected_values:
+    1500_ATF_T_7E1_7E1: 86
+  response: 7E9046250437E

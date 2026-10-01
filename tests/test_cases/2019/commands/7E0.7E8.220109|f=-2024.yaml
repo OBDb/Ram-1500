@@ -1,5 +1,11 @@
 command_id: 7E0.7E8.220109|f=-2024
 test_cases:
 - expected_values:
+    1500_BAROMETRIC_P: 100.2
+  response: 7E80562010901F5
+- expected_values:
     1500_BAROMETRIC_P: 100.4
   response: 7E80562010901F6
+- expected_values:
+    1500_BAROMETRIC_P: 100.6
+  response: 7E80562010901F7

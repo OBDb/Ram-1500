@@ -3,3 +3,6 @@ test_cases:
 - expected_values:
     1500_MDS_ACTIVE: 0
   response: 7E805620ECA0000
+- expected_values:
+    1500_MDS_ACTIVE: 0
+  response: 7E805620ECAF31F
