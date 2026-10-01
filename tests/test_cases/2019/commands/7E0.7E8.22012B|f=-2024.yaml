@@ -1,0 +1,5 @@
+command_id: 7E0.7E8.22012B|f=-2024
+test_cases:
+- expected_values:
+    1500_CAT_MODEL_T: 753
+  response: 7E80562012B02F1
