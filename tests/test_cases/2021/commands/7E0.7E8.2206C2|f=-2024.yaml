@@ -4,5 +4,23 @@ test_cases:
     1500_INT_CAM_1_OFFSET: 0.1
   response: 7E8056206C20001
 - expected_values:
+    1500_INT_CAM_1_OFFSET: 0.4
+  response: 7E8056206C20004
+- expected_values:
+    1500_INT_CAM_1_OFFSET: 0.5
+  response: 7E8056206C20005
+- expected_values:
+    1500_INT_CAM_1_OFFSET: 8
+  response: 7E8056206C20050
+- expected_values:
     1500_INT_CAM_1_OFFSET: 8.6
   response: 7E8056206C20056
+- expected_values:
+    1500_INT_CAM_1_OFFSET: 11.7
+  response: 7E8056206C20075
+- expected_values:
+    1500_INT_CAM_1_OFFSET: 13.5
+  response: 7E8056206C20087
+- expected_values:
+    1500_INT_CAM_1_OFFSET: 15.8
+  response: 7E8056206C2009E

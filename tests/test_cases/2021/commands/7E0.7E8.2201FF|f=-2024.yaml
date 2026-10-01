@@ -6,3 +6,27 @@ test_cases:
 - expected_values:
     1500_IAT_01FF: 36
   response: 7E8056201FF0064
+- expected_values:
+    1500_IAT_01FF: 49
+  response: 7E8056201FF0071
+- expected_values:
+    1500_IAT_01FF: 51
+  response: 7E8056201FF0073
+- expected_values:
+    1500_IAT_01FF: 52
+  response: 7E8056201FF0074
+- expected_values:
+    1500_IAT_01FF: 55
+  response: 7E8056201FF0077
+- expected_values:
+    1500_IAT_01FF: 56
+  response: 7E8056201FF0078
+- expected_values:
+    1500_IAT_01FF: 57
+  response: 7E8056201FF0079
+- expected_values:
+    1500_IAT_01FF: 58
+  response: 7E8056201FF007A
+- expected_values:
+    1500_IAT_01FF: 59
+  response: 7E8056201FF007B
