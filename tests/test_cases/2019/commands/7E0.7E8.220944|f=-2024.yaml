@@ -1,6 +1,12 @@
 command_id: 7E0.7E8.220944|f=-2024
 test_cases:
 - expected_values:
+    1500_BRAKE_BOOSTER_P: 59.2
+  response: '7E8056209441720'
+- expected_values:
+    1500_BRAKE_BOOSTER_P: 63.6
+  response: 7E80562094418D8
+- expected_values:
     1500_BRAKE_BOOSTER_P: 70.2
   response: 7E8056209441B6C
 - expected_values:

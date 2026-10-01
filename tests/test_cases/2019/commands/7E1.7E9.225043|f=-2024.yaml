@@ -24,3 +24,6 @@ test_cases:
 - expected_values:
     1500_ATF_T_7E1_7E1: 86
   response: 7E9046250437E
+- expected_values:
+    1500_ATF_T_7E1_7E1: 101
+  response: 7E9046250438D

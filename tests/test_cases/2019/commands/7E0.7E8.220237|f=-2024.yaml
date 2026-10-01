@@ -16,6 +16,9 @@ test_cases:
     1500_INJ_WIDTH_CYL_4: 2.752
   response: 7E80762023700000AC0
 - expected_values:
+    1500_INJ_WIDTH_CYL_4: 2.984
+  response: 7E80762023700000BA8
+- expected_values:
     1500_INJ_WIDTH_CYL_4: 4.392
   response: '7E80762023700001128'
 - expected_values:
