@@ -4,20 +4,11 @@ test_cases:
     1500_ODO_03BC: 160299
   response: 7E8076203BC098DF7F8
 - expected_values:
-    1500_ODO_03BC: 160299.2
-  response: 7E8076203BC098DF8C0
-- expected_values:
-    1500_ODO_03BC: 160299.6
-  response: 7E8076203BC098DFA50
-- expected_values:
-    1500_ODO_03BC: 160300
-  response: 7E8076203BC098DFBE0
-- expected_values:
-    1500_ODO_03BC: 160300.4
-  response: 7E8076203BC098DFD70
-- expected_values:
-    1500_ODO_03BC: 160300.7
-  response: 7E8076203BC098DFE9C
-- expected_values:
     1500_ODO_03BC: 160301
   response: 7E8076203BC098DFFC8
+- expected_values:
+    1500_ODO_03BC: 160301.6
+  response: 7E8076203BC098E0220
+- expected_values:
+    1500_ODO_03BC: 160303.1
+  response: 7E8076203BC098E07FC

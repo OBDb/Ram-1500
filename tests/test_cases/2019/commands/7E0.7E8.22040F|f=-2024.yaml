@@ -1,5 +1,29 @@
 command_id: 7E0.7E8.22040F|f=-2024
 test_cases:
 - expected_values:
+    1500_FLI_7E0: 23.3208
+  response: 7E80562040F0029
+- expected_values:
+    1500_FLI_7E0: 34.128
+  response: 7E80562040F003C
+- expected_values:
+    1500_FLI_7E0: 38.1096
+  response: 7E80562040F0043
+- expected_values:
+    1500_FLI_7E0: 50.0544
+  response: 7E80562040F0058
+- expected_values:
+    1500_FLI_7E0: 59.724
+  response: 7E80562040F0069
+- expected_values:
+    1500_FLI_7E0: 66.5496
+  response: 7E80562040F0075
+- expected_values:
+    1500_FLI_7E0: 67.1184
+  response: 7E80562040F0076
+- expected_values:
+    1500_FLI_7E0: 73.944
+  response: 7E80562040F0082
+- expected_values:
     1500_FLI_7E0: 77.9256
   response: 7E80562040F0089
