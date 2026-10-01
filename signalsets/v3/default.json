@@ -67,7 +67,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "012B"}, "freq": 5, "filter": { "to": 2024 },
   "signals": [
-    {"id": "1500_CAT_MODEL_T", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 191, "min": -64, "add": -64, "unit": "celsius" }, "name": "Catalyst modeled temperature"}
+    {"id": "1500_CAT_MODEL_T", "path": "Engine", "fmt": { "len": 16, "max": 1000, "unit": "celsius" }, "name": "Catalyst modeled temperature"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0174"}, "freq": 1, "filter": { "to": 2024 },
   "signals": [
