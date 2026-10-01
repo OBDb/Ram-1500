@@ -1,6 +1,12 @@
 command_id: 7E0.7E8.22022A|f=-2024
 test_cases:
 - expected_values:
+    1500_EOP: 24.94
+  response: 7E80462022A2B
+- expected_values:
+    1500_EOP: 31.32
+  response: 7E80462022A36
+- expected_values:
     1500_EOP: 37.12
   response: 7E80462022A40
 - expected_values:
