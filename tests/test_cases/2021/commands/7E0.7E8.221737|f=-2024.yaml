@@ -4,23 +4,8 @@ test_cases:
     1500_FL_WHL_SPD: 0
   response: '7E8056217370000'
 - expected_values:
-    1500_FL_WHL_SPD: 13.78125
-  response: '7E8056217370372'
-- expected_values:
-    1500_FL_WHL_SPD: 18.28125
-  response: '7E8056217370492'
-- expected_values:
-    1500_FL_WHL_SPD: 23.625
-  response: 7E80562173705E8
-- expected_values:
-    1500_FL_WHL_SPD: 54.42188
-  response: 7E8056217370D9B
-- expected_values:
-    1500_FL_WHL_SPD: 57.65625
-  response: 7E8056217370E6A
-- expected_values:
     1500_FL_WHL_SPD: 63.90625
   response: 7E8056217370FFA
 - expected_values:
-    1500_FL_WHL_SPD: 64.6875
-  response: 7E805621737102C
+    1500_FL_WHL_SPD: 83.39062
+  response: 7E80562173714D9
