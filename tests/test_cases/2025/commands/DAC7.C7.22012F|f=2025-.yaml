@@ -1,0 +1,8 @@
+command_id: DAC7.C7.22012F|f=2025-
+test_cases:
+- expected_values:
+    1500_TP_FL_INVALID: 1
+    1500_TP_FR_INVALID: 1
+    1500_TP_RL_INVALID: 1
+    1500_TP_RR_INVALID: 1
+  response: 18DAF1C70462012F0F

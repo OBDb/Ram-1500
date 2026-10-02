@@ -1,0 +1,8 @@
+command_id: DA10.10.221002|f=2025-,din=03
+test_cases:
+- expected_values:
+    1500_ENGINE_STATUS: 0
+  response: 18DAF110056210020000
+- expected_values:
+    1500_ENGINE_STATUS: 121
+  response: 18DAF110056210020079

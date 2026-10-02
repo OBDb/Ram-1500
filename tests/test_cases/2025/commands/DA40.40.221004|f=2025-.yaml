@@ -1,0 +1,29 @@
+command_id: DA40.40.221004|f=2025-
+test_cases:
+- expected_values:
+    1500_BATT_V_BCM: 12.5
+  response: 18DAF140046210047D
+- expected_values:
+    1500_BATT_V_BCM: 12.6
+  response: 18DAF140046210047E
+- expected_values:
+    1500_BATT_V_BCM: 12.7
+  response: 18DAF140046210047F
+- expected_values:
+    1500_BATT_V_BCM: 12.8
+  response: 18DAF1400462100480
+- expected_values:
+    1500_BATT_V_BCM: 12.9
+  response: 18DAF1400462100481
+- expected_values:
+    1500_BATT_V_BCM: 13.2
+  response: 18DAF1400462100484
+- expected_values:
+    1500_BATT_V_BCM: 14.5
+  response: 18DAF1400462100491
+- expected_values:
+    1500_BATT_V_BCM: 14.6
+  response: 18DAF1400462100492
+- expected_values:
+    1500_BATT_V_BCM: 14.8
+  response: 18DAF1400462100494

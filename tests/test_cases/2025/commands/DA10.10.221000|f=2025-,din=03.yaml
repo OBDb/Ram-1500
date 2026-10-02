@@ -1,0 +1,11 @@
+command_id: DA10.10.221000|f=2025-,din=03
+test_cases:
+- expected_values:
+    1500_RPM: 0
+  response: 18DAF110056210000000
+- expected_values:
+    1500_RPM: 959
+  response: 18DAF110056210000EFC
+- expected_values:
+    1500_RPM: 2323
+  response: 18DAF11005621000244C
