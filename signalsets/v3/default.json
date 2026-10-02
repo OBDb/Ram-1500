@@ -91,7 +91,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "0227"}, "freq": 30, "filter": { "to": 2024 }, "dbgfilter": { "to": 2012, "years": [2014, 2015, 2016, 2017, 2018, 2020], "from": 2022 },
   "signals": [
-    {"id": "1500_FLI_INPUT", "path": "Fuel", "fmt": { "len": 8, "max": 100, "unit": "percent" }, "name": "Fuel level input", "suggestedMetric": "fuelTankLevel"}
+    {"id": "1500_FLI_INPUT", "path": "Fuel", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Fuel level input", "suggestedMetric": "fuelTankLevel"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "022A"}, "freq": 1, "filter": { "to": 2024 }, "dbgfilter": { "to": 2012, "years": [2014, 2015, 2016, 2017, 2018, 2020], "from": 2022 },
   "signals": [
