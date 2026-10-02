@@ -1,0 +1,14 @@
+command_id: DA18.18.2204FE|f=2025-
+test_cases:
+- expected_values:
+    1500_ATF_T_4THGEN: 31
+  response: 18DAF118066204FE474C4E
+- expected_values:
+    1500_ATF_T_4THGEN: 85
+  response: 18DAF118066204FE7D8285
+- expected_values:
+    1500_ATF_T_4THGEN: 86
+  response: 18DAF118066204FE7E8284
+- expected_values:
+    1500_ATF_T_4THGEN: 86
+  response: 18DAF118066204FE7E8385

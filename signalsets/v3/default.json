@@ -327,11 +327,11 @@
   "signals": [
     {"id": "1500_TOT", "path": "Transmission", "fmt": { "len": 16, "max": 512, "min": -512, "div": 4, "sign": true, "unit": "fahrenheit" }, "name": "Transmission oil temperature", "suggestedMetric": "transmissionFluidTemperature"}
   ]},
-{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "1000"}, "freq": 1, "filter": { "from": 2025 },
+{ "hdr": "DA10", "rax": "10", "din": "03", "cmd": {"22": "1000"}, "freq": 1, "filter": { "from": 2025 }, "dbgfilter": { "from": 2026 },
   "signals": [
     {"id": "1500_RPM", "path": "Engine", "fmt": { "len": 16, "max": 16383, "div": 4, "unit": "rpm" }, "name": "Engine RPM"}
   ]},
-{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "1002"}, "freq": 30, "filter": { "from": 2025 },
+{ "hdr": "DA10", "rax": "10", "din": "03", "cmd": {"22": "1002"}, "freq": 30, "filter": { "from": 2025 }, "dbgfilter": { "from": 2026 },
   "signals": [
     {"id": "1500_ENGINE_STATUS", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Engine operational status"}
   ]},
@@ -375,20 +375,20 @@
   "signals": [
     {"id": "1500_BOOST", "path": "Engine", "fmt": { "len": 16, "max": 300, "min": -100, "div": 10, "add": -3276.8, "unit": "kilopascal" }, "name": "Turbo boost pressure"}
   ]},
-{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "04FE"}, "freq": 1, "filter": { "from": 2025 },
+{ "hdr": "DA18", "rax": "18", "cmd": {"22": "04FE"}, "freq": 1, "filter": { "from": 2025 }, "dbgfilter": { "from": 2026 },
   "signals": [
     {"id": "1500_ATF_T_4THGEN", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Automatic transmission fluid temperature"}
   ]},
-{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "051A"}, "freq": 0.5, "filter": { "from": 2025 },
+{ "hdr": "DA18", "rax": "18", "cmd": {"22": "051A"}, "freq": 0.5, "filter": { "from": 2025 }, "dbgfilter": { "from": 2026 },
   "signals": [
     {"id": "1500_GEAR_DESIRED", "path": "Transmission", "fmt": {          "len": 4, "max": 15, "nullmin": 0, "nullmax": 13, "unit": "scalar" }, "name": "Desired gear"},
     {"id": "1500_GEAR_CURRENT", "path": "Transmission", "fmt": {"bix": 4, "len": 4, "max": 15, "nullmin": 0, "nullmax": 13, "unit": "scalar" }, "name": "Current gear"}
   ]},
-{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "1018"}, "freq": 2, "filter": { "from": 2025 },
+{ "hdr": "DA18", "rax": "18", "cmd": {"22": "1018"}, "freq": 2, "filter": { "from": 2025 }, "dbgfilter": { "from": 2026 },
   "signals": [
     {"id": "1500_TCM_TORQUE", "path": "Transmission", "fmt": { "len": 16, "max": 1000, "min": -500, "add": -500, "unit": "newtonMeters" }, "name": "Transmission reported torque"}
   ]},
-{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "2024"}, "freq": 86400, "filter": { "from": 2025 },
+{ "hdr": "DA18", "rax": "18", "cmd": {"22": "2024"}, "freq": 86400, "filter": { "from": 2025 }, "dbgfilter": { "from": 2026 },
   "signals": [
     {"id": "1500_TIRE_SIZE", "path": "Tires", "fmt": {"bix": 64, "len": 16, "max": 65535, "unit": "millimeters" }, "name": "Tire size"}
   ]},
@@ -412,11 +412,11 @@
   "signals": [
     {"id": "1500_WSS_FL", "path": "Movement", "fmt": { "len": 16, "max": 300, "unit": "kilometersPerHour" }, "name": "Front left wheel speed"}
   ]},
-{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "F158"}, "freq": 86400, "filter": { "from": 2025 },
+{ "hdr": "DA18", "rax": "18", "cmd": {"22": "F158"}, "freq": 86400, "filter": { "from": 2025 }, "dbgfilter": { "from": 2026 },
   "signals": [
     {"id": "1500_MODEL_YEAR", "path": "Details", "fmt": { "len": 8, "max": 2225, "add": 2000, "unit": "scalar" }, "name": "Model year"}
   ]},
-{ "hdr": "DA30", "rax": "30", "dbg": true, "cmd": {"22": "0885"}, "freq": 0.1, "filter": { "from": 2025 },
+{ "hdr": "DA30", "rax": "30", "cmd": {"22": "0885"}, "freq": 0.1, "filter": { "from": 2025 }, "dbgfilter": { "from": 2026 },
   "signals": [
     {"id": "1500_STEER_ANGLE", "path": "Control", "fmt": { "len": 16, "max": 720, "min": -720, "div": 10, "add": -720, "unit": "degrees" }, "name": "Steering wheel angle"}
   ]},
@@ -429,27 +429,27 @@
     {"id": "1500_FR_VSS", "path": "Movement",    "fmt": {"bix": 176, "len": 16, "max": 4095,                 "div": 16,                               "unit": "kilometersPerHour"      }, "name": "Front right wheel speed"},
     {"id": "1500_RR_VSS", "path": "Movement",    "fmt": {"bix": 208, "len": 16, "max": 4095,                 "div": 16,                               "unit": "kilometersPerHour"      }, "name": "Rear right wheel speed"}
   ]},
-{ "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "1004"}, "freq": 30, "filter": { "from": 2025 },
+{ "hdr": "DA40", "rax": "40", "cmd": {"22": "1004"}, "freq": 30, "filter": { "from": 2025 }, "dbgfilter": { "from": 2026 },
   "signals": [
     {"id": "1500_BATT_V_BCM", "path": "Battery", "fmt": { "len": 8, "max": 25, "div": 10, "unit": "volts" }, "name": "Battery voltage, BCM"}
   ]},
-{ "hdr": "DAC7", "rax": "C7", "dbg": true, "cmd": {"22": "0123"}, "freq": 86400, "filter": { "from": 2025 },
+{ "hdr": "DAC7", "rax": "C7", "cmd": {"22": "0123"}, "freq": 86400, "filter": { "from": 2025 }, "dbgfilter": { "from": 2026 },
   "signals": [
     {"id": "1500_TID_FL", "path": "Tires", "fmt": { "len": 32, "max": 4294967295, "unit": "hex" }, "name": "Front left tire sensor id"}
   ]},
-{ "hdr": "DAC7", "rax": "C7", "dbg": true, "cmd": {"22": "0124"}, "freq": 86400, "filter": { "from": 2025 },
+{ "hdr": "DAC7", "rax": "C7", "cmd": {"22": "0124"}, "freq": 86400, "filter": { "from": 2025 }, "dbgfilter": { "from": 2026 },
   "signals": [
     {"id": "1500_TID_FR", "path": "Tires", "fmt": { "len": 32, "max": 4294967295, "unit": "hex" }, "name": "Front right tire sensor id"}
   ]},
-{ "hdr": "DAC7", "rax": "C7", "dbg": true, "cmd": {"22": "0125"}, "freq": 86400, "filter": { "from": 2025 },
+{ "hdr": "DAC7", "rax": "C7", "cmd": {"22": "0125"}, "freq": 86400, "filter": { "from": 2025 }, "dbgfilter": { "from": 2026 },
   "signals": [
     {"id": "1500_TID_RL", "path": "Tires", "fmt": { "len": 32, "max": 4294967295, "unit": "hex" }, "name": "Rear left tire sensor id"}
   ]},
-{ "hdr": "DAC7", "rax": "C7", "dbg": true, "cmd": {"22": "0127"}, "freq": 86400, "filter": { "from": 2025 },
+{ "hdr": "DAC7", "rax": "C7", "cmd": {"22": "0127"}, "freq": 86400, "filter": { "from": 2025 }, "dbgfilter": { "from": 2026 },
   "signals": [
     {"id": "1500_TID_RR", "path": "Tires", "fmt": { "len": 32, "max": 4294967295, "unit": "hex" }, "name": "Rear right tire sensor id"}
   ]},
-{ "hdr": "DAC7", "rax": "C7", "dbg": true, "cmd": {"22": "012F"}, "freq": 5, "filter": { "from": 2025 },
+{ "hdr": "DAC7", "rax": "C7", "cmd": {"22": "012F"}, "freq": 5, "filter": { "from": 2025 }, "dbgfilter": { "from": 2026 },
   "signals": [
     {"id": "1500_TP_RL_INVALID", "path": "Tires", "fmt": {"bix": 4, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear left tire pressure invalid?"},
     {"id": "1500_TP_RR_INVALID", "path": "Tires", "fmt": {"bix": 5, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear right tire pressure invalid?"},
@@ -476,7 +476,7 @@
     {"id": "1500_TP_RR_2", "path": "Tires", "fmt": {           "len": 16, "max": 65.535,             "div": 1000,             "nullmin": 0,   "unit": "bars"    }, "name": "Rear right tire pressure",    "suggestedMetric": "rearRightTirePressure"},
     {"id": "1500_TT_RR",   "path": "Tires", "fmt": {"bix": 16, "len": 8,  "max": 205,    "min": -50,              "add": -50, "nullmin": -50, "unit": "celsius" }, "name": "Rear right tire temperature", "suggestedMetric": "rearRightTireTemperature"}
   ]},
-{ "hdr": "DAC7", "rax": "C7", "dbg": true, "cmd": {"22": "0302"}, "freq": 1, "filter": { "from": 2025 },
+{ "hdr": "DAC7", "rax": "C7", "cmd": {"22": "0302"}, "freq": 1, "filter": { "from": 2025 }, "dbgfilter": { "from": 2026 },
   "signals": [
     {"id": "1500_RRD_OPEN",            "path": "Doors", "fmt": {"bix": 3, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear right door open"},
     {"id": "1500_RLD_OPEN",            "path": "Doors", "fmt": {"bix": 4, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear left door open"},
