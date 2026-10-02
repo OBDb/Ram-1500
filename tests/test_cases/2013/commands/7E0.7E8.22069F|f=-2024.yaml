@@ -1,8 +1,8 @@
 command_id: 7E0.7E8.22069F|f=-2024
 test_cases:
 - expected_values:
-    1500_VARIABLE_VLV_TIM_OIL_T: 32
-  response: 7E80462069F60
+    1500_VARIABLE_VLV_TIM_OIL_T: 16
+  response: 7E80462069F50
 - expected_values:
     1500_VARIABLE_VLV_TIM_OIL_T: 100
   response: 7E80462069FA4

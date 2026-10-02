@@ -1,8 +1,8 @@
 command_id: 7E0.7E8.2201FF|f=-2024
 test_cases:
 - expected_values:
-    1500_IAT_01FF: 31
-  response: 7E8056201FF005F
+    1500_IAT_01FF: 14
+  response: 7E8056201FF004E
 - expected_values:
     1500_IAT_01FF: 56
   response: 7E8056201FF0078
