@@ -1,6 +1,9 @@
 command_id: 7E0.7E8.220127|f=-2024
 test_cases:
 - expected_values:
+    1500_AAT_2: 53.8
+  response: 7E8046201274C
+- expected_values:
     1500_AAT_2: 79
   response: 7E8046201275A
 - expected_values:
