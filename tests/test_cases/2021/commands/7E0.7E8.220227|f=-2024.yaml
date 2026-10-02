@@ -1,20 +1,20 @@
 command_id: 7E0.7E8.220227|f=-2024
 test_cases:
 - expected_values:
-    1500_FLI_INPUT: 100
+    1500_FLI_INPUT: 44.70588
   response: '7E80462022772'
 - expected_values:
-    1500_FLI_INPUT: 100
+    1500_FLI_INPUT: 45.09804
   response: '7E80462022773'
 - expected_values:
-    1500_FLI_INPUT: 100
+    1500_FLI_INPUT: 45.4902
   response: '7E80462022774'
 - expected_values:
-    1500_FLI_INPUT: 100
+    1500_FLI_INPUT: 45.88235
   response: '7E80462022775'
 - expected_values:
-    1500_FLI_INPUT: 100
+    1500_FLI_INPUT: 46.27451
   response: '7E80462022776'
 - expected_values:
-    1500_FLI_INPUT: 100
+    1500_FLI_INPUT: 46.66667
   response: '7E80462022777'
