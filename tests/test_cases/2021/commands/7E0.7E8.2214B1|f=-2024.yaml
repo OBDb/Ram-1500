@@ -4,26 +4,5 @@ test_cases:
     1500_THROTTLE_INLET_AIR_T: 29
   response: 7E8056214B1005D
 - expected_values:
-    1500_THROTTLE_INLET_AIR_T: 30
-  response: 7E8056214B1005E
-- expected_values:
-    1500_THROTTLE_INLET_AIR_T: 39
-  response: 7E8056214B10067
-- expected_values:
-    1500_THROTTLE_INLET_AIR_T: 43
-  response: 7E8056214B1006B
-- expected_values:
-    1500_THROTTLE_INLET_AIR_T: 44
-  response: 7E8056214B1006C
-- expected_values:
-    1500_THROTTLE_INLET_AIR_T: 49
-  response: 7E8056214B10071
-- expected_values:
-    1500_THROTTLE_INLET_AIR_T: 50
-  response: 7E8056214B10072
-- expected_values:
-    1500_THROTTLE_INLET_AIR_T: 51
-  response: 7E8056214B10073
-- expected_values:
     1500_THROTTLE_INLET_AIR_T: 52
   response: 7E8056214B10074

@@ -13,5 +13,11 @@ test_cases:
     1500_EOP: 31.32
   response: 7E80462022A36
 - expected_values:
+    1500_EOP: 31.9
+  response: 7E80462022A37
+- expected_values:
+    1500_EOP: 32.48
+  response: 7E80462022A38
+- expected_values:
     1500_EOP: 33.06
   response: 7E80462022A39

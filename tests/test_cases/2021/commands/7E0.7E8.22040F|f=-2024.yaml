@@ -4,20 +4,5 @@ test_cases:
     1500_FLI_7E0: 22.752
   response: 7E80562040F0028
 - expected_values:
-    1500_FLI_7E0: 23.3208
-  response: 7E80562040F0029
-- expected_values:
-    1500_FLI_7E0: 46.6416
-  response: 7E80562040F0052
-- expected_values:
-    1500_FLI_7E0: 60.2928
-  response: 7E80562040F006A
-- expected_values:
-    1500_FLI_7E0: 72.2376
-  response: 7E80562040F007F
-- expected_values:
-    1500_FLI_7E0: 74.5128
-  response: 7E80562040F0083
-- expected_values:
-    1500_FLI_7E0: 76.788
-  response: 7E80562040F0087
+    1500_FLI_7E0: 118.8792
+  response: 7E80562040F00D1

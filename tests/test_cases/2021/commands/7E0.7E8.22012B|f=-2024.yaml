@@ -7,8 +7,8 @@ test_cases:
     1500_CAT_MODEL_T: 525
   response: 7E80562012B020D
 - expected_values:
-    1500_CAT_MODEL_T: 760
-  response: 7E80562012B02F8
+    1500_CAT_MODEL_T: 763
+  response: 7E80562012B02FB
 - expected_values:
     1500_CAT_MODEL_T: 809
   response: 7E80562012B0329

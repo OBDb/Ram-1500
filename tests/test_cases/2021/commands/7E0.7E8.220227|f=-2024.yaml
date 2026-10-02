@@ -2,6 +2,12 @@ command_id: 7E0.7E8.220227|f=-2024
 test_cases:
 - expected_values:
     1500_FLI_INPUT: 100
+  response: '7E80462022772'
+- expected_values:
+    1500_FLI_INPUT: 100
+  response: '7E80462022773'
+- expected_values:
+    1500_FLI_INPUT: 100
   response: '7E80462022774'
 - expected_values:
     1500_FLI_INPUT: 100
