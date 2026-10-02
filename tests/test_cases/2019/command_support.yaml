@@ -5,6 +5,7 @@ supported_commands_by_ecu:
   "7DF":
   - 7DF.0101
   - 7DF.0104
+  - 7DF.0105
   - 7DF.0106
   - 7DF.010B
   - 7DF.010D
@@ -271,6 +272,8 @@ unsupported_commands_by_ecu:
   - 7E1.7E9.223C22|f=-2024:1500_CURRENT_GEAR
   "7E2":
   - 7E2.7EA.0101
+  - 7E2.7EA.0104
+  - 7E2.7EA.0105
   - 7E2.7EA.010C
   - 7E2.7EA.0121
   - 7E2.7EA.0133
