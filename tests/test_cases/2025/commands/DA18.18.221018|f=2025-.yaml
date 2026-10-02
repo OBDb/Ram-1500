@@ -1,0 +1,11 @@
+command_id: DA18.18.221018|f=2025-
+test_cases:
+- expected_values:
+    1500_TCM_TORQUE: -32
+  response: 18DAF1180562101801D4
+- expected_values:
+    1500_TCM_TORQUE: 2
+  response: 18DAF1180562101801F6
+- expected_values:
+    1500_TCM_TORQUE: 20
+  response: 18DAF118056210180208
