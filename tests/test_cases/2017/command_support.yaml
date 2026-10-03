@@ -75,6 +75,7 @@ supported_commands_by_ecu:
   - 7E1.7E9.2204FE|f=-2024:1500_ATF_T
   - 7E1.7E9.225034|f=-2024:1500_MAIN_CYL_P
   - 7E1.7E9.225043|f=-2024:1500_ATF_T_7E1_7E1
+  - 7E1.7E9.225503|fc=1,f=-2024:1500_GEAR
 unsupported_commands_by_ecu:
   "740":
   - 740.22A0A1
