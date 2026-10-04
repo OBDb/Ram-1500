@@ -4,26 +4,8 @@ test_cases:
     1500_THROTTLE_INLET_P: 100.2125
   response: 7E8056212473EA2
 - expected_values:
-    1500_THROTTLE_INLET_P: 100.225
-  response: 7E8056212473EA4
-- expected_values:
-    1500_THROTTLE_INLET_P: 100.4125
-  response: 7E8056212473EC2
-- expected_values:
-    1500_THROTTLE_INLET_P: 100.66875
-  response: 7E8056212473EEB
-- expected_values:
-    1500_THROTTLE_INLET_P: 100.675
-  response: 7E8056212473EEC
-- expected_values:
-    1500_THROTTLE_INLET_P: 100.69375
-  response: 7E8056212473EEF
-- expected_values:
     1500_THROTTLE_INLET_P: 100.7
   response: 7E8056212473EF0
 - expected_values:
-    1500_THROTTLE_INLET_P: 101.1125
-  response: 7E8056212473F32
-- expected_values:
-    1500_THROTTLE_INLET_P: 101.125
-  response: 7E8056212473F34
+    1500_THROTTLE_INLET_P: 100.91875
+  response: 7E8056212473F13

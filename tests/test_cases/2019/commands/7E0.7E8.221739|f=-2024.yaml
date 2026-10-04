@@ -7,5 +7,5 @@ test_cases:
     1500_RL_WHL_SPD: 39.65625
   response: 7E80562173909EA
 - expected_values:
-    1500_RL_WHL_SPD: 95.34375
-  response: 7E80562173917D6
+    1500_RL_WHL_SPD: 99.14062
+  response: 7E80562173918C9

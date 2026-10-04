@@ -24,3 +24,9 @@ test_cases:
 - expected_values:
     1500_KNOCK_SENS_2: 0.23438
   response: 7E8056201AA0C00
+- expected_values:
+    1500_KNOCK_SENS_2: 0.27344
+  response: 7E8056201AA0E00
+- expected_values:
+    1500_KNOCK_SENS_2: 0.32715
+  response: 7E8056201AA10C0
