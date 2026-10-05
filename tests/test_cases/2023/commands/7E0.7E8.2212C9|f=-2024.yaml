@@ -1,0 +1,5 @@
+command_id: 7E0.7E8.2212C9|f=-2024
+test_cases:
+- expected_values:
+    1500_LOW_SIDE_ECT: -64
+  response: 7E8046212C900
