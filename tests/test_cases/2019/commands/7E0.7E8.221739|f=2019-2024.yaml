@@ -1,4 +1,4 @@
-command_id: 7E0.7E8.221739|f=-2024
+command_id: 7E0.7E8.221739|f=2019-2024
 test_cases:
 - expected_values:
     1500_RL_WHL_SPD: 0
