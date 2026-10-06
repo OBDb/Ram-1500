@@ -3,3 +3,9 @@ test_cases:
 - expected_values:
     1500_VARIABLE_VLV_TIM_OIL_T: 62
   response: 7E80462069F7E
+- expected_values:
+    1500_VARIABLE_VLV_TIM_OIL_T: 69
+  response: 7E80462069F85
+- expected_values:
+    1500_VARIABLE_VLV_TIM_OIL_T: 72
+  response: 7E80462069F88

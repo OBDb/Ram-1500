@@ -3,3 +3,12 @@ test_cases:
 - expected_values:
     1500_THROTTLE_INLET_P: 99.8
   response: 7E8056212473E60
+- expected_values:
+    1500_THROTTLE_INLET_P: 99.9
+  response: 7E8056212473E70
+- expected_values:
+    1500_THROTTLE_INLET_P: 99.94375
+  response: 7E8056212473E77
+- expected_values:
+    1500_THROTTLE_INLET_P: 99.95
+  response: 7E8056212473E78

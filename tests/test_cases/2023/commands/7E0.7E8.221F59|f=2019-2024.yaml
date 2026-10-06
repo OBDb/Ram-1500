@@ -3,3 +3,12 @@ test_cases:
 - expected_values:
     1500_WASTEGATE_POS_SENS: 1.91296
   response: 7E805621F590188
+- expected_values:
+    1500_WASTEGATE_POS_SENS: 1.93736
+  response: 7E805621F59018D
+- expected_values:
+    1500_WASTEGATE_POS_SENS: 2.01056
+  response: 7E805621F59019C
+- expected_values:
+    1500_WASTEGATE_POS_SENS: 2.03008
+  response: 7E805621F5901A0

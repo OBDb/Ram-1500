@@ -3,3 +3,6 @@ test_cases:
 - expected_values:
     1500_THROTTLE_INLET_AIR_T: 20
   response: 7E8056214B10054
+- expected_values:
+    1500_THROTTLE_INLET_AIR_T: 23
+  response: 7E8056214B10057

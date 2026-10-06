@@ -3,3 +3,9 @@ test_cases:
 - expected_values:
     1500_FR_WHL_SPD: 0
   response: '7E8056217380000'
+- expected_values:
+    1500_FR_WHL_SPD: 14.90625
+  response: 7E80562173803BA
+- expected_values:
+    1500_FR_WHL_SPD: 61.73438
+  response: 7E8056217380F6F
