@@ -1,5 +1,14 @@
 command_id: 7E0.7E8.2201AA|f=-2024
 test_cases:
 - expected_values:
+    1500_KNOCK_SENS_2: 0.32235
+  response: 7E8056201AA1081
+- expected_values:
     1500_KNOCK_SENS_2: 0.35813
   response: 7E8056201AA1256
+- expected_values:
+    1500_KNOCK_SENS_2: 0.60021
+  response: 7E8056201AA1EBB
+- expected_values:
+    1500_KNOCK_SENS_2: 0.77058
+  response: 7E8056201AA2774

@@ -1,5 +1,14 @@
 command_id: 7E0.7E8.220329|f=-2024
 test_cases:
 - expected_values:
+    1500_AC_HIGH_SIDE_P_2: 532
+  response: '7E80462032926'
+- expected_values:
+    1500_AC_HIGH_SIDE_P_2: 686
+  response: '7E80462032931'
+- expected_values:
+    1500_AC_HIGH_SIDE_P_2: 742
+  response: '7E80462032935'
+- expected_values:
     1500_AC_HIGH_SIDE_P_2: 882
   response: 7E8046203293F

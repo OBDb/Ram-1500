@@ -1,5 +1,14 @@
 command_id: 7E0.7E8.22012B|f=-2024
 test_cases:
 - expected_values:
+    1500_CAT_MODEL_T: 534
+  response: 7E80562012B0216
+- expected_values:
     1500_CAT_MODEL_T: 537
   response: 7E80562012B0219
+- expected_values:
+    1500_CAT_MODEL_T: 560
+  response: 7E80562012B0230
+- expected_values:
+    1500_CAT_MODEL_T: 842
+  response: 7E80562012B034A

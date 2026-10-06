@@ -3,3 +3,6 @@ test_cases:
 - expected_values:
     1500_BRAKE_BOOSTER_P: 65.25
   response: 7E805620944197D
+- expected_values:
+    1500_BRAKE_BOOSTER_P: 72.4
+  response: 7E8056209441C48
