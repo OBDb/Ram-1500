@@ -8,6 +8,7 @@ supported_commands_by_ecu:
   - 7DF.0105
   - 7DF.0106
   - 7DF.010B
+  - 7DF.010C
   - 7DF.010D
   - 7DF.010E
   - 7DF.010F
@@ -262,6 +263,7 @@ unsupported_commands_by_ecu:
   - 7E0.7E8.22B09B|f=-2024:1500_TQ_CONV_LOCK
   "7E1":
   - 7E1.7E9.0101
+  - 7E1.7E9.010C
   - 7E1.7E9.0121
   - 7E1.7E9.0130
   - 7E1.7E9.0149
