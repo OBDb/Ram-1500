@@ -21,3 +21,6 @@ test_cases:
 - expected_values:
     1500_FLI_INPUT: 58.82353
   response: '7E80462022796'
+- expected_values:
+    1500_FLI_INPUT: 78.43137
+  response: 7E804620227C8
