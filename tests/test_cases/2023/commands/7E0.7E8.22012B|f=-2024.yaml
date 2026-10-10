@@ -10,5 +10,8 @@ test_cases:
     1500_CAT_MODEL_T: 560
   response: 7E80562012B0230
 - expected_values:
+    1500_CAT_MODEL_T: 677
+  response: 7E80562012B02A5
+- expected_values:
     1500_CAT_MODEL_T: 842
   response: 7E80562012B034A

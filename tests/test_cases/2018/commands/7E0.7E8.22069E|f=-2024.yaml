@@ -1,0 +1,20 @@
+command_id: 7E0.7E8.22069E|f=-2024
+test_cases:
+- expected_values:
+    1500_VARIABLE_VLV_TIM_OIL_P: 240
+  response: 7E80462069E3C
+- expected_values:
+    1500_VARIABLE_VLV_TIM_OIL_P: 328
+  response: 7E80462069E52
+- expected_values:
+    1500_VARIABLE_VLV_TIM_OIL_P: 332
+  response: 7E80462069E53
+- expected_values:
+    1500_VARIABLE_VLV_TIM_OIL_P: 336
+  response: 7E80462069E54
+- expected_values:
+    1500_VARIABLE_VLV_TIM_OIL_P: 340
+  response: 7E80462069E55
+- expected_values:
+    1500_VARIABLE_VLV_TIM_OIL_P: 344
+  response: 7E80462069E56

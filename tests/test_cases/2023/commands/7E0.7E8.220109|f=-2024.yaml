@@ -3,3 +3,6 @@ test_cases:
 - expected_values:
     1500_BAROMETRIC_P: 99.8
   response: 7E80562010901F3
+- expected_values:
+    1500_BAROMETRIC_P: 101
+  response: 7E80562010901F9

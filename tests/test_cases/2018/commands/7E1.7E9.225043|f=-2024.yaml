@@ -1,0 +1,17 @@
+command_id: 7E1.7E9.225043|f=-2024
+test_cases:
+- expected_values:
+    1500_ATF_T_7E1_7E1: 92
+  response: '7E90462504384'
+- expected_values:
+    1500_ATF_T_7E1_7E1: 102
+  response: 7E9046250438E
+- expected_values:
+    1500_ATF_T_7E1_7E1: 104
+  response: '7E90462504390'
+- expected_values:
+    1500_ATF_T_7E1_7E1: 105
+  response: '7E90462504391'
+- expected_values:
+    1500_ATF_T_7E1_7E1: 107
+  response: '7E90462504393'

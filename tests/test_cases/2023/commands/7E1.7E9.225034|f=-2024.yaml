@@ -6,3 +6,6 @@ test_cases:
 - expected_values:
     1500_MAIN_CYL_P: -37.9
   response: '7E9056250340015'
+- expected_values:
+    1500_MAIN_CYL_P: -28.5
+  response: '7E9056250340073'

@@ -1,0 +1,29 @@
+command_id: 7E0.7E8.22012B|f=-2024
+test_cases:
+- expected_values:
+    1500_CAT_MODEL_T: 644
+  response: 7E80562012B0284
+- expected_values:
+    1500_CAT_MODEL_T: 720
+  response: 7E80562012B02D0
+- expected_values:
+    1500_CAT_MODEL_T: 754
+  response: 7E80562012B02F2
+- expected_values:
+    1500_CAT_MODEL_T: 764
+  response: 7E80562012B02FC
+- expected_values:
+    1500_CAT_MODEL_T: 768
+  response: 7E80562012B0300
+- expected_values:
+    1500_CAT_MODEL_T: 992
+  response: 7E80562012B03E0
+- expected_values:
+    1500_CAT_MODEL_T: 1000
+  response: 7E80562012B03EB
+- expected_values:
+    1500_CAT_MODEL_T: 1000
+  response: 7E80562012B03F6
+- expected_values:
+    1500_CAT_MODEL_T: 1000
+  response: 7E80562012B03F8
