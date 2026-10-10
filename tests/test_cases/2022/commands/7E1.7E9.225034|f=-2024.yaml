@@ -1,0 +1,11 @@
+command_id: 7E1.7E9.225034|f=-2024
+test_cases:
+- expected_values:
+    1500_MAIN_CYL_P: -40
+  response: '7E9056250340000'
+- expected_values:
+    1500_MAIN_CYL_P: -14.9
+  response: 7E90562503400FB
+- expected_values:
+    1500_MAIN_CYL_P: 19.1
+  response: 7E905625034024F
