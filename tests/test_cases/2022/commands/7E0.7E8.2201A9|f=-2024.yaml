@@ -10,5 +10,5 @@ test_cases:
     1500_KNOCK_SENS_1: 0.17578
   response: 7E8056201A90900
 - expected_values:
-    1500_KNOCK_SENS_1: 0.34668
-  response: 7E8056201A911C0
+    1500_KNOCK_SENS_1: 0.38087
+  response: 7E8056201A91380

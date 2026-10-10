@@ -4,8 +4,8 @@ test_cases:
     1500_MAP: 18
   response: 7E805620174005A
 - expected_values:
-    1500_MAP: 58.2
-  response: '7E8056201740123'
+    1500_MAP: 51
+  response: 7E80562017400FF
 - expected_values:
-    1500_MAP: 97
-  response: 7E80562017401E5
+    1500_MAP: 52.6
+  response: '7E8056201740107'

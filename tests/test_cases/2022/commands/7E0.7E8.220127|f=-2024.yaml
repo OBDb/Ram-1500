@@ -15,3 +15,6 @@ test_cases:
 - expected_values:
     1500_AAT_2: 59.2
   response: 7E8046201274F
+- expected_values:
+    1500_AAT_2: 61
+  response: '7E80462012750'
