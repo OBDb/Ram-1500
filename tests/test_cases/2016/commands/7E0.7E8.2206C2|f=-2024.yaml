@@ -1,0 +1,5 @@
+command_id: 7E0.7E8.2206C2|f=-2024
+test_cases:
+- expected_values:
+    1500_INT_CAM_1_OFFSET: 0
+  response: 7E8056206C20000

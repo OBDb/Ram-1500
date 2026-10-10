@@ -12,3 +12,6 @@ test_cases:
 - expected_values:
     1500_AC_HIGH_SIDE_P_2: 882
   response: 7E8046203293F
+- expected_values:
+    1500_AC_HIGH_SIDE_P_2: 1414
+  response: '7E80462032965'

@@ -1,0 +1,5 @@
+command_id: 7E0.7E8.220174|f=-2024
+test_cases:
+- expected_values:
+    1500_MAP: 41.6
+  response: 7E80562017400D0
