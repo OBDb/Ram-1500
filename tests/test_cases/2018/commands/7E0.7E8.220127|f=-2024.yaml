@@ -1,0 +1,14 @@
+command_id: 7E0.7E8.220127|f=-2024
+test_cases:
+- expected_values:
+    1500_AAT_2: 88
+  response: 7E8046201275F
+- expected_values:
+    1500_AAT_2: 91.6
+  response: '7E80462012761'
+- expected_values:
+    1500_AAT_2: 93.4
+  response: '7E80462012762'
+- expected_values:
+    1500_AAT_2: 95.2
+  response: '7E80462012763'
