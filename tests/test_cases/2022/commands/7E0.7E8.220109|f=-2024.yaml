@@ -7,5 +7,23 @@ test_cases:
     1500_BAROMETRIC_P: 97
   response: 7E80562010901E5
 - expected_values:
+    1500_BAROMETRIC_P: 97.2
+  response: 7E80562010901E6
+- expected_values:
+    1500_BAROMETRIC_P: 97.8
+  response: 7E80562010901E9
+- expected_values:
+    1500_BAROMETRIC_P: 98
+  response: 7E80562010901EA
+- expected_values:
+    1500_BAROMETRIC_P: 98.2
+  response: 7E80562010901EB
+- expected_values:
+    1500_BAROMETRIC_P: 98.4
+  response: 7E80562010901EC
+- expected_values:
+    1500_BAROMETRIC_P: 98.6
+  response: 7E80562010901ED
+- expected_values:
     1500_BAROMETRIC_P: 99.2
   response: 7E80562010901F0
