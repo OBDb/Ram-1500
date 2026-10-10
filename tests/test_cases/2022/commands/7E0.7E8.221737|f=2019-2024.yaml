@@ -1,0 +1,11 @@
+command_id: 7E0.7E8.221737|f=2019-2024
+test_cases:
+- expected_values:
+    1500_FL_WHL_SPD: 0
+  response: '7E8056217370000'
+- expected_values:
+    1500_FL_WHL_SPD: 63.98438
+  response: 7E8056217370FFF
+- expected_values:
+    1500_FL_WHL_SPD: 92.95312
+  response: 7E805621737173D
