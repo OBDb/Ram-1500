@@ -1,0 +1,5 @@
+command_id: 7E0.7E8.220ECA|f=-2024
+test_cases:
+- expected_values:
+    1500_MDS_ACTIVE: 0
+  response: 7E805620ECA0000

@@ -1,0 +1,29 @@
+command_id: 7E0.7E8.220174|f=-2024
+test_cases:
+- expected_values:
+    1500_MAP: 23.4
+  response: '7E8056201740075'
+- expected_values:
+    1500_MAP: 35.4
+  response: 7E80562017400B1
+- expected_values:
+    1500_MAP: 42.6
+  response: 7E80562017400D5
+- expected_values:
+    1500_MAP: 46.6
+  response: 7E80562017400E9
+- expected_values:
+    1500_MAP: 49.8
+  response: 7E80562017400F9
+- expected_values:
+    1500_MAP: 97.6
+  response: 7E80562017401E8
+- expected_values:
+    1500_MAP: 97.8
+  response: 7E80562017401E9
+- expected_values:
+    1500_MAP: 98.4
+  response: 7E80562017401EC
+- expected_values:
+    1500_MAP: 98.6
+  response: 7E80562017401ED
