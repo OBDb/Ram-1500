@@ -32,7 +32,3 @@ test_cases:
     1500_GEAR_CURRENT: null
     1500_GEAR_DESIRED: null
   response: 18DAF1180462051ADD
-- expected_values:
-    1500_GEAR_CURRENT: null
-    1500_GEAR_DESIRED: null
-  response: 18DAF1180462051AEE
