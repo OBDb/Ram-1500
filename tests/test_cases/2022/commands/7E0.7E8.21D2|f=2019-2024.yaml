@@ -1,7 +1,7 @@
 command_id: 7E0.7E8.21D2|f=2019-2024
 test_cases:
 - expected_values:
-    1500_EOT_21D2: -64
+    1500_EOT_21D2: null
   response: |-
     7E8104D61D2FFFF0000
     7E82100000000000000
