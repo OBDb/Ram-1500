@@ -3,3 +3,6 @@ test_cases:
 - expected_values:
     1500_FLI_INPUT: 42.35294
   response: 7E8046202276C
+- expected_values:
+    1500_FLI_INPUT: 51.76471
+  response: '7E80462022784'

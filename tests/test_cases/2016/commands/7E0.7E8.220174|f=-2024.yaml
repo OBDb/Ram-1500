@@ -3,3 +3,12 @@ test_cases:
 - expected_values:
     1500_MAP: 41.6
   response: 7E80562017400D0
+- expected_values:
+    1500_MAP: 70.4
+  response: '7E8056201740160'
+- expected_values:
+    1500_MAP: 71
+  response: '7E8056201740163'
+- expected_values:
+    1500_MAP: 96.2
+  response: 7E80562017401E1

@@ -3,3 +3,12 @@ test_cases:
 - expected_values:
     1500_KNOCK_SENS_1: 0.27832
   response: 7E8056201A90E40
+- expected_values:
+    1500_KNOCK_SENS_1: 0.52247
+  response: 7E8056201A91AC0
+- expected_values:
+    1500_KNOCK_SENS_1: 0.53712
+  response: 7E8056201A91B80
+- expected_values:
+    1500_KNOCK_SENS_1: 0.59571
+  response: 7E8056201A91E80
