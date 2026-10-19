@@ -4,26 +4,8 @@ test_cases:
     1500_BAROMETRIC_P: 99.6
   response: 7E80562010901F2
 - expected_values:
-    1500_BAROMETRIC_P: 99.8
-  response: 7E80562010901F3
-- expected_values:
-    1500_BAROMETRIC_P: 100
-  response: 7E80562010901F4
-- expected_values:
-    1500_BAROMETRIC_P: 100.2
-  response: 7E80562010901F5
-- expected_values:
-    1500_BAROMETRIC_P: 100.4
-  response: 7E80562010901F6
-- expected_values:
-    1500_BAROMETRIC_P: 100.8
-  response: 7E80562010901F8
+    1500_BAROMETRIC_P: 102
+  response: 7E80562010901FE
 - expected_values:
     1500_BAROMETRIC_P: 102.6
   response: '7E8056201090201'
-- expected_values:
-    1500_BAROMETRIC_P: 103
-  response: '7E8056201090203'
-- expected_values:
-    1500_BAROMETRIC_P: 103.4
-  response: '7E8056201090205'
