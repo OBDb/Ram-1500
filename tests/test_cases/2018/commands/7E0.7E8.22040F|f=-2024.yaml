@@ -4,6 +4,9 @@ test_cases:
     1500_FLI_7E0: 24.4584
   response: 7E80562040F002B
 - expected_values:
+    1500_FLI_7E0: 25.0272
+  response: 7E80562040F002C
+- expected_values:
     1500_FLI_7E0: 42.0912
   response: 7E80562040F004A
 - expected_values:

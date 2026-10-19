@@ -4,6 +4,9 @@ test_cases:
     1500_MAP: 23.4
   response: '7E8056201740075'
 - expected_values:
+    1500_MAP: 32.4
+  response: 7E80562017400A2
+- expected_values:
     1500_MAP: 35.4
   response: 7E80562017400B1
 - expected_values:
