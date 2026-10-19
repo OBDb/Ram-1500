@@ -6,3 +6,9 @@ test_cases:
 - expected_values:
     1500_IAT_01FF: 40
   response: 7E8056201FF0068
+- expected_values:
+    1500_IAT_01FF: 46
+  response: 7E8056201FF006E
+- expected_values:
+    1500_IAT_01FF: 49
+  response: 7E8056201FF0071

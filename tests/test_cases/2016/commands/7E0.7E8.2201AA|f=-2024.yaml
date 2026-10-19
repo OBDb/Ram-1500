@@ -4,11 +4,17 @@ test_cases:
     1500_KNOCK_SENS_2: 0.28809
   response: 7E8056201AA0EC0
 - expected_values:
+    1500_KNOCK_SENS_2: 0.40528
+  response: 7E8056201AA14C0
+- expected_values:
     1500_KNOCK_SENS_2: 0.49317
   response: 7E8056201AA1940
 - expected_values:
     1500_KNOCK_SENS_2: 0.57618
   response: 7E8056201AA1D80
+- expected_values:
+    1500_KNOCK_SENS_2: 0.62013
+  response: 7E8056201AA1FC0
 - expected_values:
     1500_KNOCK_SENS_2: 0.76173
   response: 7E8056201AA2700

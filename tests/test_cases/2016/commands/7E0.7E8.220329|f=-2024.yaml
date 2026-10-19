@@ -4,5 +4,11 @@ test_cases:
     1500_AC_HIGH_SIDE_P_2: 728
   response: '7E80462032934'
 - expected_values:
+    1500_AC_HIGH_SIDE_P_2: 952
+  response: '7E80462032944'
+- expected_values:
     1500_AC_HIGH_SIDE_P_2: 1218
   response: '7E80462032957'
+- expected_values:
+    1500_AC_HIGH_SIDE_P_2: 1274
+  response: 7E8046203295B

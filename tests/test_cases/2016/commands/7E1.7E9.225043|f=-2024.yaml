@@ -7,5 +7,11 @@ test_cases:
     1500_ATF_T_7E1_7E1: 69
   response: 7E9046250436D
 - expected_values:
+    1500_ATF_T_7E1_7E1: 72
+  response: '7E90462504370'
+- expected_values:
+    1500_ATF_T_7E1_7E1: 76
+  response: '7E90462504374'
+- expected_values:
     1500_ATF_T_7E1_7E1: 79
   response: '7E90462504377'
