@@ -4,5 +4,8 @@ test_cases:
     1500_AAT_2: 70
   response: '7E80462012755'
 - expected_values:
+    1500_AAT_2: 71.8
+  response: '7E80462012756'
+- expected_values:
     1500_AAT_2: 106
   response: '7E80462012769'
