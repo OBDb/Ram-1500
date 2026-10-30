@@ -1,0 +1,5 @@
+command_id: DA18.18.22F158|f=2025-
+test_cases:
+- expected_values:
+    1500_MODEL_YEAR: 2026
+  response: 18DAF1180762F1581A7C0A02

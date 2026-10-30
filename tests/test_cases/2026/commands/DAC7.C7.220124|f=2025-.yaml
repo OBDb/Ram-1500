@@ -1,0 +1,5 @@
+command_id: DAC7.C7.220124|f=2025-
+test_cases:
+- expected_values:
+    1500_TID_FR: 34515288
+  response: 18DAF1C707620124020EA958
