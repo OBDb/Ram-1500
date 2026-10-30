@@ -3,3 +3,6 @@ test_cases:
 - expected_values:
     RUNTM: 0
   response: 18DAF11004411F0000
+- expected_values:
+    RUNTM: 1026
+  response: 18DAF11004411F0402

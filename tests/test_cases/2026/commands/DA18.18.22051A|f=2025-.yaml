@@ -1,0 +1,6 @@
+command_id: DA18.18.22051A|f=2025-
+test_cases:
+- expected_values:
+    1500_GEAR_CURRENT: null
+    1500_GEAR_DESIRED: null
+  response: 18DAF1180462051ADD
