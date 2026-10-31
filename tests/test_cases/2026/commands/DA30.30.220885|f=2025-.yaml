@@ -1,8 +1,26 @@
 command_id: DA30.30.220885|f=2025-
 test_cases:
 - expected_values:
+    1500_STEER_ANGLE: -45.2
+  response: 18DAF130076208851A5C1A5C
+- expected_values:
+    1500_STEER_ANGLE: -15.7
+  response: 18DAF130076208851B831B83
+- expected_values:
+    1500_STEER_ANGLE: -3.6
+  response: 18DAF130076208851BFC1BFC
+- expected_values:
+    1500_STEER_ANGLE: -2.2
+  response: 18DAF130076208851C0A1C0A
+- expected_values:
     1500_STEER_ANGLE: 8.2
   response: 18DAF130076208851C721C72
 - expected_values:
     1500_STEER_ANGLE: 8.3
   response: 18DAF130076208851C731C73
+- expected_values:
+    1500_STEER_ANGLE: 90.1
+  response: 18DAF130076208851FA51FA5
+- expected_values:
+    1500_STEER_ANGLE: 121.5
+  response: 18DAF1300762088520DF20DF

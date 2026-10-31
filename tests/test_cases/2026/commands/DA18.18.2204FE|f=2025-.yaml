@@ -4,5 +4,8 @@ test_cases:
     1500_ATF_T_4THGEN: 70
   response: 18DAF118066204FE6E7477
 - expected_values:
-    1500_ATF_T_4THGEN: 71
-  response: 18DAF118066204FE6F7477
+    1500_ATF_T_4THGEN: 76
+  response: 18DAF118066204FE747A7D
+- expected_values:
+    1500_ATF_T_4THGEN: 77
+  response: 18DAF118066204FE757A7D
