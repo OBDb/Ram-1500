@@ -1,5 +1,11 @@
 command_id: DA40.40.221004|f=2025-
 test_cases:
 - expected_values:
+    1500_BATT_V_BCM: 14.1
+  response: 18DAF140046210048D
+- expected_values:
+    1500_BATT_V_BCM: 14.4
+  response: 18DAF1400462100490
+- expected_values:
     1500_BATT_V_BCM: 14.5
   response: 18DAF1400462100491

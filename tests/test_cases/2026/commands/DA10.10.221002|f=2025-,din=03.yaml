@@ -3,3 +3,18 @@ test_cases:
 - expected_values:
     1500_ENGINE_STATUS: 0
   response: 18DAF110056210020000
+- expected_values:
+    1500_ENGINE_STATUS: 2502
+  response: 18DAF1100562100209C6
+- expected_values:
+    1500_ENGINE_STATUS: 3165
+  response: 18DAF110056210020C5D
+- expected_values:
+    1500_ENGINE_STATUS: 4100
+  response: 18DAF110056210021004
+- expected_values:
+    1500_ENGINE_STATUS: 4800
+  response: 18DAF1100562100212C0
+- expected_values:
+    1500_ENGINE_STATUS: 5059
+  response: 18DAF1100562100213C3

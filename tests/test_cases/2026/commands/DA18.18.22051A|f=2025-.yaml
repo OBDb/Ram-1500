@@ -1,6 +1,26 @@
 command_id: DA18.18.22051A|f=2025-
 test_cases:
 - expected_values:
+    1500_GEAR_CURRENT: 1
+    1500_GEAR_DESIRED: 1
+  response: 18DAF1180462051A11
+- expected_values:
+    1500_GEAR_CURRENT: 2
+    1500_GEAR_DESIRED: 1
+  response: 18DAF1180462051A12
+- expected_values:
+    1500_GEAR_CURRENT: 3
+    1500_GEAR_DESIRED: 3
+  response: 18DAF1180462051A33
+- expected_values:
+    1500_GEAR_CURRENT: 4
+    1500_GEAR_DESIRED: 4
+  response: 18DAF1180462051A44
+- expected_values:
+    1500_GEAR_CURRENT: 4
+    1500_GEAR_DESIRED: 5
+  response: 18DAF1180462051A54
+- expected_values:
     1500_GEAR_CURRENT: null
     1500_GEAR_DESIRED: null
   response: 18DAF1180462051ADD
