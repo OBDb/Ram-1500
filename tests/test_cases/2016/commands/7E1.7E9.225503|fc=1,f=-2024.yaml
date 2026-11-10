@@ -25,7 +25,7 @@ test_cases:
     1500_GEAR: '8'
   response: '7E90462550308'
 - expected_values:
-    1500_GEAR: REAR
+    1500_GEAR: REVERSE
   response: 7E9046255030B
 - expected_values:
     1500_GEAR: PARK
