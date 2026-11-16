@@ -24,3 +24,11 @@ test_cases:
   response: |-
     4C2100B62A077200003
     4C22129282A29FF0003
+- expected_values:
+    1500_TP_FL: 33
+    1500_TP_FR: 31
+    1500_TP_RL: 33
+    1500_TP_RR: 34
+  response: |-
+    4C2100B62A077250403
+    4C221211F2122FF0403
