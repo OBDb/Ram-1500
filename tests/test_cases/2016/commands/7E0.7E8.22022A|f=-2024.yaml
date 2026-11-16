@@ -9,3 +9,6 @@ test_cases:
 - expected_values:
     1500_EOP: 41.76
   response: 7E80462022A48
+- expected_values:
+    1500_EOP: 44.66
+  response: 7E80462022A4D

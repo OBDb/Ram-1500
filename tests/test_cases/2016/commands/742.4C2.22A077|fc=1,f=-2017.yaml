@@ -28,7 +28,39 @@ test_cases:
     1500_TP_FL: 33
     1500_TP_FR: 31
     1500_TP_RL: 33
+    1500_TP_RR: 32
+  response: |-
+    4C2100B62A077250403
+    4C221211F2120FF0403
+- expected_values:
+    1500_TP_FL: 33
+    1500_TP_FR: 31
+    1500_TP_RL: 33
     1500_TP_RR: 34
   response: |-
     4C2100B62A077250403
     4C221211F2122FF0403
+- expected_values:
+    1500_TP_FL: 33
+    1500_TP_FR: 31
+    1500_TP_RL: 34
+    1500_TP_RR: 32
+  response: |-
+    4C2100B62A077250403
+    4C221211F2220FF0403
+- expected_values:
+    1500_TP_FL: 33
+    1500_TP_FR: 32
+    1500_TP_RL: 34
+    1500_TP_RR: 33
+  response: |-
+    4C2100B62A077250403
+    4C22121202221FF0403
+- expected_values:
+    1500_TP_FL: 34
+    1500_TP_FR: 32
+    1500_TP_RL: 34
+    1500_TP_RR: 33
+  response: |-
+    4C2100B62A077250403
+    4C22122202221FF0403
