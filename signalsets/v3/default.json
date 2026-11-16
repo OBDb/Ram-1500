@@ -59,7 +59,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "0109"}, "freq": 1, "filter": { "to": 2024 }, "dbgfilter": { "to": 2012, "years": [2014, 2017, 2020], "from": 2024 },
   "signals": [
-    {"id": "1500_BAROMETRIC_P", "path": "Engine", "fmt": { "len": 16, "max": 13107, "div": 5, "unit": "kilopascal" }, "name": "Barometric pressure"}
+    {"id": "1500_BAROMETRIC_P", "path": "Engine", "fmt": { "len": 16, "max": 13107, "div": 5, "unit": "kilopascal" }, "name": "Barometric pressure", "suggestedMetric": "barometricPressure"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "0127"}, "freq": 5, "filter": { "to": 2024 }, "dbgfilter": { "to": 2012, "years": [2014, 2017, 2020], "from": 2024 },
   "signals": [
@@ -87,7 +87,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "01FF"}, "freq": 5, "filter": { "to": 2024 }, "dbgfilter": { "to": 2012, "years": [2014, 2017, 2020], "from": 2024 },
   "signals": [
-    {"id": "1500_IAT_01FF", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 191, "min": -64, "add": -64, "unit": "celsius" }, "name": "Intake manifold air temperature"}
+    {"id": "1500_IAT_01FF", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 191, "min": -64, "add": -64, "unit": "celsius" }, "name": "Intake manifold air temperature", "suggestedMetric": "intakeAirTemperature"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"22": "0227"}, "freq": 1, "filter": { "to": 2024 }, "dbgfilter": { "to": 2012, "years": [2014, 2017, 2020], "from": 2024 },
   "signals": [
@@ -373,7 +373,7 @@
   ]},
 { "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "195A"}, "freq": 1, "filter": { "from": 2025 },
   "signals": [
-    {"id": "1500_BOOST", "path": "Engine", "fmt": { "len": 16, "max": 300, "min": -100, "div": 10, "add": -3276.8, "unit": "kilopascal" }, "name": "Turbo boost pressure"}
+    {"id": "1500_BOOST", "path": "Engine", "fmt": { "len": 16, "max": 300, "min": -100, "div": 10, "add": -3276.8, "unit": "kilopascal" }, "name": "Turbo boost pressure", "suggestedMetric": "absoluteBoostPressure"}
   ]},
 { "hdr": "DA18", "rax": "18", "cmd": {"22": "04FE"}, "freq": 1, "filter": { "from": 2025 }, "dbgfilter": { "from": 2027 },
   "signals": [
@@ -420,10 +420,10 @@
   "signals": [
     {"id": "1500_STEER_ANGLE", "path": "Control", "fmt": { "len": 16, "max": 720, "min": -720, "div": 10, "add": -720, "unit": "degrees" }, "name": "Steering wheel angle"}
   ]},
-{ "hdr": "DA30", "rax": "30", "dbg": true, "cmd": {"22": "2962"}, "freq": 0.1, "filter": { "from": 2025 },
+{ "hdr": "DA30", "rax": "30", "dbg": true, "cmd": {"22": "2962"}, "freq": 0.25, "filter": { "from": 2025 },
   "signals": [
-    {"id": "1500_LAT_G",  "path": "Orientation", "fmt": {"bix": 4,   "len": 12, "max": 40.94, "min": -40.94, "div": 50, "add": -40.96, "nullmax": 40, "unit": "metersPerSecondSquared" }, "name": "Lateral acceleration"},
-    {"id": "1500_LNG_G",  "path": "Orientation", "fmt": {"bix": 20,  "len": 12, "max": 40.94, "min": -40.94, "div": 50, "add": -40.96, "nullmax": 40, "unit": "metersPerSecondSquared" }, "name": "Longitudinal acceleration"},
+    {"id": "1500_LAT_G",  "path": "Orientation", "fmt": {"bix": 4,   "len": 12, "max": 40.94, "min": -40.94, "div": 50, "add": -40.96, "nullmax": 40, "unit": "metersPerSecondSquared" }, "name": "Lateral acceleration",      "suggestedMetric": "lateralAcceleration"},
+    {"id": "1500_LNG_G",  "path": "Orientation", "fmt": {"bix": 20,  "len": 12, "max": 40.94, "min": -40.94, "div": 50, "add": -40.96, "nullmax": 40, "unit": "metersPerSecondSquared" }, "name": "Longitudinal acceleration", "suggestedMetric": "longitudinalAcceleration"},
     {"id": "1500_FL_VSS", "path": "Movement",    "fmt": {"bix": 112, "len": 16, "max": 4095,                 "div": 16,                               "unit": "kilometersPerHour"      }, "name": "Front left wheel speed"},
     {"id": "1500_RL_VSS", "path": "Movement",    "fmt": {"bix": 144, "len": 16, "max": 4095,                 "div": 16,                               "unit": "kilometersPerHour"      }, "name": "Rear left wheel speed"},
     {"id": "1500_FR_VSS", "path": "Movement",    "fmt": {"bix": 176, "len": 16, "max": 4095,                 "div": 16,                               "unit": "kilometersPerHour"      }, "name": "Front right wheel speed"},
