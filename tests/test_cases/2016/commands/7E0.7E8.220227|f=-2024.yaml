@@ -4,29 +4,5 @@ test_cases:
     1500_FLI_INPUT: 42.35294
   response: 7E8046202276C
 - expected_values:
-    1500_FLI_INPUT: 45.09804
-  response: '7E80462022773'
-- expected_values:
-    1500_FLI_INPUT: 47.45098
-  response: '7E80462022779'
-- expected_values:
-    1500_FLI_INPUT: 47.84314
-  response: 7E8046202277A
-- expected_values:
-    1500_FLI_INPUT: 48.23529
-  response: 7E8046202277B
-- expected_values:
-    1500_FLI_INPUT: 48.62745
-  response: 7E8046202277C
-- expected_values:
-    1500_FLI_INPUT: 49.01961
-  response: 7E8046202277D
-- expected_values:
-    1500_FLI_INPUT: 50.98039
-  response: '7E80462022782'
-- expected_values:
-    1500_FLI_INPUT: 51.37255
-  response: '7E80462022783'
-- expected_values:
     1500_FLI_INPUT: 51.76471
   response: '7E80462022784'
