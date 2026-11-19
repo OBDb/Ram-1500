@@ -4,5 +4,5 @@ test_cases:
     1500_FLI_INPUT: 42.35294
   response: 7E8046202276C
 - expected_values:
-    1500_FLI_INPUT: 56.86275
-  response: '7E80462022791'
+    1500_FLI_INPUT: 60.78431
+  response: 7E8046202279B
